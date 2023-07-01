@@ -1,0 +1,17 @@
+:root {
+    /* Body */
+    --body-background-color-light: #F6F6F6;
+    --body-background-color-dark: #202024;
+    /* Font colors */
+    --main-text-color: #B4AFAF;
+    --strong-text-color: #111111;
+    --accent-text-color: #4F2EE8;
+    /* Colors */
+    --white: #FFFFFF;
+    --violet: #4F2EE8;
+    --yellow: #EAC645;
+    --black: #111111;
+    /* Timing function */
+    --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+

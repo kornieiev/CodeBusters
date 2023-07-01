@@ -1,0 +1,30 @@
+.allcat_h3 {
+    color: var(--violet);
+    font-size: 16px;
+    font-family: DM Sans;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.32px;
+    text-transform: uppercase;
+
+
+}
+.categories-container {
+}
+
+.category-row {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.categories-container button {
+    color: rgba(17, 17, 17, 0.60);
+    font-family: DM Sans;
+    letter-spacing: -0.32px;
+
+    background-color: var(--white);
+    border: none;
+    cursor: pointer;
+    text-align: left;
+}
+

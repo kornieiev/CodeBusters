@@ -1,1 +1,101 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+@font-face {
+  font-family: 'DM Sans';
+  src: local('DM Sans'), url('../fonts/DMSans-Bold.ttf') format('ttf'),
+    url('../fonts/DMSans-BoldItalic.ttf') format('ttf'),
+    url('../fonts/DMSans-Italic.ttf') format('ttf'),
+    url('../fonts/DMSans-Medium.ttf') format('ttf'),
+    url('../fonts/DMSans-MediumItalic.ttf') format('ttf'),
+    url('../fonts/DMSans-Regular.ttf') format('ttf');
+}
+
+/* default font */
+.page {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: black;
+}
+
+// breakpoints
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1440px;
+
+.container {
+  // display: flex;
+  // justify-content: center;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  @media screen and (max-width: 767px) {
+    max-width: $mobile;
+  }
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+    padding: 0 32px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+    padding: 0 24px;
+  }
+}
+
+/* reset button styles */
+button {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* visually-hidden */
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+/* delete margins, paddings & ul elements */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button,
+input,
+textarea {
+  outline: none;
+  text-decoration: none;
+}
+
+/* delete default underlines */
+.link {
+  text-decoration: none;
+}
+
+/* reset margin for h & p */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
