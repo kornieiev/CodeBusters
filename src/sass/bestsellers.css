@@ -1,7 +1,7 @@
 .bestsellers-button {
   margin-top: 8px;
   display: inline-flex;
-  padding: 14px 28px;
+  padding: 14px 26px;
   align-items: flex-start;
   gap: 10px;
   border-radius: 40px;
@@ -15,6 +15,10 @@
   letter-spacing: -0.14px;
   text-transform: uppercase;
 }
+.bookcard-image {
+  width: 335px;
+}
+
 .bestsellers-list {
   padding: 0;
   display: flex;
@@ -63,7 +67,63 @@
   flex-shrink: 0;
   border-radius: 54px;
   background: #4f2ee8;
-  position: relative;
+  position: sticky;
   bottom: 140px;
-  left: 271px;
+  left: 1000px;
+}
+@media screen and (min-width: 768px) {
+  .bestsellers-button-up {
+    display: none;
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 768px) {
+  .bestsellers-mobile {
+    display: none;
+    visibility: hidden;
+  }
+}
+.bestsellers-list-second {
+  display: flex;
+  flex-direction: row;
+  column-gap: 25px;
+}
+@media screen and (min-width: 768px) {
+  .bestsellers-mobile {
+  }
+}
+@media screen and (max-width: 1200px) {
+  .bestsellers-tablet {
+    display: none;
+    visibility: hidden;
+  }
+}
+@media screen and (min-width: 768px) {
+  .bestsellers-list-second {
+    width: 704px;
+    column-gap: 25px;
+    display: flex;
+    flex-direction: row;
+  }
+  .bookcard-image {
+    width: 218px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .bookcard-image {
+    width: 280px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .bookcard-image {
+    width: 180px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .bestsellers-list-item {
+    width: 1000px;
+  }
+  .bestsellers-list {
+    width: 1000px;
+  }
 }
