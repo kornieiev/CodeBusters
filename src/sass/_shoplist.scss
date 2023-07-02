@@ -6,7 +6,17 @@
 }
 @media (max-width: 1199px) {
   .shopping-list-left {
-    display: none;
+    // display: none;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
   }
 }
 
@@ -15,8 +25,6 @@
 }
 
 .shopping-list {
-  padding: 0 20px;
-
   @media (min-width: $tablet) and (max-width: 1199px) {
     padding: 0 32px;
   }
