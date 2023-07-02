@@ -8,6 +8,7 @@
     <a href="/src/index.html" class="logo-link">
         <svg class="logo-icon" width="24px" height="24px"><use href="/src/images/sprite.svg#icon-logo"></use>></svg><svg class="logo-text" width="77px" height="13px"><use href="/src/images/sprite.svg#icon-bookshelf"></use></svg>
     </a>
+    
     <ul class="navigation navigation-menu">
         <li class="navigation-menu-item">
             <a type="button" class="page-button active" href="/src/index.html">HOME</a>
@@ -27,7 +28,7 @@
         <input id="switch-theme" type="checkbox" name="switch-theme" class="switch-theme-check">
         <label for="switch-theme" class="switch-theme-check-desc"></label>
     </div>
-    <a href="" class="menu-burger-link">
+    <a href="" class="menu-burger-link" data-modal-open>
       <svg class="burger-menu-icon" width="28px" height="28px"><use href="/src/images/sprite.svg#icon-burger"></use></svg>
     </a>
     <a href="" class="menu-close-link visually-hidden">
@@ -75,4 +76,92 @@
 
 </div>
 
+<!-- Modal 1 -->
+
+<div class="backdrop is-hidden" data-modal-up>
+
+  <div class="sign-up-modal">
+    <button type="button" class="btn-close-open" data-modal-close-up>
+      <svg width="20" height="20" class="modal-close-btn">
+        <use href="/src/images/sprite.svg#icon-x-close"></use>
+      </svg>
+    </button>
+
+    <h3 class="header-sign-up visually-hidden">Sign up</h3>
+
+    <form name="sign-up" class="sign-up-form">
+      <ul class="sign-up-list-form">
+        <li>
+          <input id="user_name" type="text" class="modal-input" placeholder="NAME" required >
+        </li>
+        <li>
+          <input id="user_email" type="text" class="modal-input" placeholder="EMAIL" required >
+          <svg width="18px" height="18px" class="sign-up-icon mail">
+            <use href="/src/images/sprite.svg#icon-mail"></use>
+          </svg>
+          
+        </li>
+        <li>
+          <input id="user_email" type="text" class="modal-input" placeholder="PASSWORD" required >
+          <svg width="18px" height="18px" class="sign-up-icon lock">
+            <use href="/src/images/sprite.svg#icon-lock"></use>
+          </svg>
+          
+
+        </li>
+      </ul>
+      <button type="submit" class="sign-up-btn" data-submit-open>SIGN UP</button>
+    </form>
+
+    
+    
+    <ul class="sign-list">
+     <li><a href="#" class="sign-link active">SIGN UP</a></li>
+      <li><a href="#" class="sign-link up">SIGN IN</a></li>
+   </ul>
+
+  </div>
+
+</div>
+
+<!-- Modal 2 -->
+
+<div class="backdrop is-hidden" data-modal-in>
+
+  <div class="sign-up-modal sign-in">
+    <button type="button" class="btn-close-open" data-modal-close-in>
+      <svg width="20" height="20" class="modal-close-btn">
+        <use href="/src/images/sprite.svg#icon-x-close"></use>
+      </svg>
+    </button>
+
+    <h3 class="header-sign-up visually-hidden">Sign up</h3>
+
+    <form name="sign-up" class="sign-up-form  ">
+      <ul class="sign-up-list-form">
+        <li>
+          <input id="user_name" type="text" class="modal-input" placeholder="NAME" required >
+        </li>
+        <li>
+          <input id="user_email" type="text" class="modal-input" placeholder="PASSWORD" required >
+          <svg width="18px" height="18px" class="sign-up-icon lock sign-in">
+            <use href="/src/images/sprite.svg#icon-lock"></use>
+          </svg>
+        </li>
+      </ul>
+      <button type="submit" class="sign-up-btn" data-submit-open>SIGN IN</button>
+    </form>
+
+    
+    
+    <ul class="sign-list">
+     <li><a href="" class="sign-link in">SIGN UP</a></li>
+      <li><a href="" class="sign-link active" data-modal-in>SIGN IN</a></li>
+   </ul>
+
+  </div>
+
+</div>
+
 <script type="module" src="/src/components/header.js"></script>
+<script type="module" src="/src/components/signup-in-modal.js"></script>
