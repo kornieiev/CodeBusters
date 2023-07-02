@@ -57,3 +57,13 @@
 .bestsellers-button-pading {
   padding-left: 156px;
 }
+.bestsellers-button-up {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  border-radius: 54px;
+  background: #4f2ee8;
+  position: relative;
+  bottom: 140px;
+  left: 271px;
+}

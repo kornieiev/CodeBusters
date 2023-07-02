@@ -2,6 +2,7 @@ import './components/support-ukraine/support-array';
 import './components/support-ukraine/support';
 import './components/categories';
 import './components/bookcard'
+import './components/bestsellers';
 ////////////////////////////////////////// тест коду api
 // import { getCategories } from '../src/api';
 // import { getBooksAllCategories } from '../src/api';
@@ -16,3 +17,6 @@ import './components/bookcard'
 //   console.log(response);
 // })();
 //////////////////////////////////////////////////////
+
+
+import './components/support-ukraine/support-swiper';
