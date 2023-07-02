@@ -3,8 +3,6 @@
 }
 
 .shopping-list-left {
-  padding-top: 40px;
-  margin-left: 24px;
 }
 @media (max-width: 1199px) {
   .shopping-list-left {
@@ -17,7 +15,15 @@
 }
 
 .shopping-list {
-  padding: 40px 0;
+  padding: 0 20px;
+
+  @media (min-width: $tablet) and (max-width: 1199px) {
+    padding: 0 32px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0 24px;
+  }
 }
 
 .shopping-empty-container {
@@ -31,7 +37,7 @@
 .shopping-list-tittle {
   margin-bottom: 120px;
   margin-top: 0;
-  padding-left: 20px;
+  // padding-left: 20px;
   color: var(--strong-text-color);
   font-size: 32px;
   font-family: 'DM Sans';
@@ -41,7 +47,7 @@
   letter-spacing: -1.28px;
 
   @media (min-width: $tablet) and (max-width: 1199px) {
-    padding-left: 32px;
+    // padding-left: 32px;
     margin-bottom: 140px;
     font-size: 48px;
     line-height: 52px;
@@ -49,7 +55,7 @@
   }
 
   @media (min-width: $desktop) {
-    padding-left: 40px;
+    // padding-left: 40px;
     margin-bottom: 140px;
     font-size: 48px;
     line-height: 52px;
@@ -247,4 +253,12 @@
   @media (min-width: $tablet) {
     gap: 16px;
   }
+}
+
+.support {
+  margin-top: 0px;
+}
+
+.container {
+  margin-left: 0px;
 }
