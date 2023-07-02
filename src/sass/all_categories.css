@@ -1,8 +1,7 @@
-/* ці параметри забиті в common.scss -> .container */
-/* .section_cat {
+.section_cat {
     padding-top: 40px;
     padding-bottom: 40px;
-} */
+}
 
 .categories_list .container {
     display: flex;
@@ -14,17 +13,6 @@
     width: 335px;
     height: 228px;
     overflow-y: auto;
-}
-
-.allcat_h3 {
-    color: var(--violet);
-    font-size: 16px;
-    font-family: DM Sans;
-    font-weight: 700;
-    line-height: 18px;
-    letter-spacing: -0.32px;
-    text-transform: uppercase;
-    margin-bottom: 24px;
 }
 
 .category-list {
@@ -48,6 +36,14 @@
     border: none;
     cursor: pointer;
     text-align: left;
+}
+
+.category-list button.active {
+    color: var(--violet);
+    font-size: 16px;
+    font-family: DM Sans;
+    font-weight: 700;
+    line-height: 18px;
 }
 
 @media screen and (min-width: 768px) {
