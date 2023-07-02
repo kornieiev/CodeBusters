@@ -26,13 +26,19 @@
     margin-bottom: 24px;
 }
 
+.category-list {
+    width: 335px;
+    height: 228px;
+    overflow-y: auto;
+}
+
 .category-row {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-.categories-container button {
+.category-list button {
     color: rgba(17, 17, 17, 0.60);
     font-family: DM Sans;
     letter-spacing: -0.32px;
