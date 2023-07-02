@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bookshelf - Shopping list</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap"
+    />
     <link rel="stylesheet" href="../sass/index.scss" />
     <script type="module" src="../index.js"></script>
   </head>
@@ -11,24 +15,94 @@
     <ul>
       <li><a href="../index.html">HOME</a></li>
     </ul>
-    <hr />
-
     <include src="./pages/blocks/header.html"></include>
-    <hr />
-    <section class="shopping-list container">
-      <h1 class="shopping-list-tittle">
-        Shopping <span class="sh-list-span">List</span>
-      </h1>
-      <div class="shopping-empty-container">
-        <h3 class="shopping-empty-text">
-          This page is empty, add some books and proceed to order.
-        </h3>
-        <img
-          class="shopping-empty-image"
-          src="../images/shopping-empty.png"
-          alt="books"
-        />
-      </div>
-    </section>
+    <div class="shopping-list-container">
+      <section class="shopping-list-left">
+        <include src="./pages/blocks/support.html"></include>
+      </section>
+      <section class="shopping-list shopping-list-right">
+        <h2 class="shopping-list-tittle">
+          Shopping <span class="sh-list-span">List</span>
+        </h2>
+        <div class="shopping-empty-container">
+          <h3 class="shopping-empty-text">
+            This page is empty, add some books and proceed to order.
+          </h3>
+          <img
+            class="shopping-empty-image"
+            src="../images/shopping-empty.png"
+            alt="books"
+          />
+        </div>
+        <div class="shopping-cardlist-container">
+          <ul class="shopping-list-cardlist">
+            <li class="shopping-list-card">
+              <img
+                class="shopping-list-cardlogo"
+                src="../images/shopping-list-cardlogo-test.png"
+                alt="book-logo"
+              />
+              <div class="shopping-list-fullinfo">
+                <div class="shopping-list-cardheaer">
+                  <div class="cardheaer-tittlecontainer">
+                    <h3 class="shopping-list-cardtitle">I will find you</h3>
+                    <h4 class="shopping-list-cardcategory">
+                      Hardcover fiction
+                    </h4>
+                  </div>
+                  <button class="deletecard"></button>
+                </div>
+                <p class="shopping-list-carddescription">
+                  David Burroughs was once a devoted father to his
+                  three-year-old son Matthew, living a dream life just a short
+                  drive away from the working-class suburb where he and his
+                  wife, Cheryl, first fell in love--until one fateful night when
+                  David woke suddenly to discover Matthew had been murdered
+                  while David was asleep just down the hall.
+                </p>
+                <div class="shopping-list-cardfooter">
+                  <h4 class="shopping-list-cardauthor">R.J. Palacio</h4>
+                  <ul class="shopping-list-shops">
+                    <li class="shopping-list-shopsitem">
+                      <a href="" class="shopping-list-shopslink">
+                        <svg
+                          class="shopping-list-shopsicon"
+                          width="32"
+                          height="11"
+                        >
+                          <use href="../images/sprite.svg#icon-burger"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="shopping-list-shopsitem">
+                      <a href="" class="shopping-list-shopslink">
+                        <svg
+                          class="shopping-list-shopsicon"
+                          width="16"
+                          height="16"
+                        >
+                          <use href="../images/sprite.svg#icon-burger"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="shopping-list-shopsitem">
+                      <a href="" class="shopping-list-shopslink">
+                        <svg
+                          class="shopping-list-shopsicon"
+                          width="16"
+                          height="16"
+                        >
+                          <use href="../images/sprite.svg#icon-burger"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
   </body>
 </html>
