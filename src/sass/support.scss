@@ -65,6 +65,7 @@
     display: flex;
     align-items: center;
     gap: 16px;
+    height: 32px;
     list-style: none;
 
 }
@@ -78,10 +79,15 @@
 .support-link:hover{
     filter: none;
 }
+img{
+    width: auto;
+}
 
 .support-btn{
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin: 0 auto;
     width: 32px;
     height: 32px;
     border-radius: 32px;
@@ -94,4 +100,18 @@
     transform: scale(1.3);  
 }
 
+.swiper {
+    height: 188px;
+    margin-bottom: 16px;
+
+    overflow: hidden;
+@media screen and (min-width: 768px) {
+        height: 292px;
+        margin-bottom: 32px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        margin-bottom: 40px;
+    }
+}
 

@@ -16,3 +16,6 @@ import './components/bookcard'
 //   console.log(response);
 // })();
 //////////////////////////////////////////////////////
+
+
+import './components/support-ukraine/support-swiper';
