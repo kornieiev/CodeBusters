@@ -1,17 +1,18 @@
 import { getBooksByCategory } from "../api";
-const a = document.querySelectorAll(".bestsellers-item-name")
-const bookTitle = document.querySelectorAll(".bookcard-name")
-const bookAuthor = document.querySelectorAll(".bookcard-author")
-const image = document.querySelectorAll(".bookcard-image")
 
+export function getBookcard(categories, titles, authors, images) {
+    
 
-for (let i = 0; i < 4; i++) {
-    let category = a[i].textContent;
-    getBooksByCategory(category)
-        .then(response => {
-            bookTitle[i].textContent = response.data[0].title
-            bookAuthor[i].textContent = response.data[0].author
-            image[i].src = response.data[0].book_image
-        })
+    for (let i = 0; i < categories.length; i++) {
+        let category = categories[i].textContent;
+        getBooksByCategory(category)
+            .then(response => {
+                const a = Math.floor(Math.random() * response.data.length);
+                titles[i].textContent = response.data[a].title
+                authors[i].textContent = response.data[a].author
+                images[i].src = response.data[a].book_image
+            })
+    
+    }
     
 }
