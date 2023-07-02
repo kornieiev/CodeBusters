@@ -33,6 +33,16 @@ $mobile: 375px;
 $tablet: 768px;
 $desktop: 1200px;
 
+.combined {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
+    flex-direction: row;
+  }
+}
+
 .container {
   // display: flex;
   // justify-content: center;
