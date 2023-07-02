@@ -1,5 +1,6 @@
 // Svitlana
 
+
 import saveTheChildren1x from '/src/images/support-img/save-the-children@1x.png';
 import saveTheChildren2x from '/src/images/support-img/save-the-children@2x.png';
 import projectHOPE1x from '/src/images/support-img/project-hope@1x.png';
@@ -12,12 +13,14 @@ import medicinsSansFrontieres1x from '/src/images/support-img/medecins-sans@1x.p
 import medicinsSansFrontieres2x from '/src/images/support-img/medecins-sans@2x.png';
 import razom1x from '/src/images/support-img/razom@1x.png';
 import razom2x from '/src/images/support-img/razom@2x.png';
+import serhiyPrytula1x from '/src/images/support-img/sergiy-prytula@1x.png';
+import serhiyPrytula2x from '/src/images/support-img/sergiy-prytula@2x.png';
 import actionAgainsthunger1x from '/src/images/support-img/action-against-hunger@1x.png';
 import actionAgainsthunger2x from '/src/images/support-img/action-against-hunge@2x.png';
 import worldvision1x from '/src/images/support-img/world-vision@1x.png';
 import worldvision2x from '/src/images/support-img/world-vision@2x.png';
-import serhiyPrytula1x from '/src/images/support-img/sergiy-prytula@1x.png';
-import serhiyPrytula2x from '/src/images/support-img/sergiy-prytula@2x.png';
+
+
 
 export const supportArray = [
   {

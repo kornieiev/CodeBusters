@@ -1,7 +1,8 @@
+// Svitlana
+
 import Swiper from 'swiper';
 
 const btnSwiper = document.querySelector('.swiper-button-next')
-console.log(btnSwiper);
 
 const swiper = new Swiper('.swiper', {
   direction: 'vertical',
