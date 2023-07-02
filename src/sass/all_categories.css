@@ -1,18 +1,7 @@
-.section_cat {
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
 .categories_list .container {
     display: flex;
     flex-direction: column;
     /* margin: 0; */
-}
-
-.category-list {
-    width: 335px;
-    height: 228px;
-    overflow-y: auto;
 }
 
 .category-list {
