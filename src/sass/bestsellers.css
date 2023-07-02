@@ -14,6 +14,9 @@
   line-height: 18px;
   letter-spacing: -0.14px;
   text-transform: uppercase;
+  position: sticky;
+  left: 1500px;
+  background-color: var(--white);
 }
 .bookcard-image {
   width: 335px;
