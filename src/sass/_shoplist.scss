@@ -1,3 +1,21 @@
+.shopping-list-container {
+  display: flex;
+}
+
+.shopping-list-left {
+  padding-top: 40px;
+  margin-left: 24px;
+}
+@media (max-width: $desktop) {
+  .shopping-list-left {
+    display: none;
+  }
+}
+
+.shopping-list-right {
+  flex-grow: 1;
+}
+
 .shopping-list {
   padding: 40px 0;
 }
@@ -13,8 +31,8 @@
 .shopping-list-tittle {
   margin-bottom: 120px;
   margin-top: 0;
-  padding-left: 15px;
-  color: #111;
+  padding-left: 20px;
+  color: var(--strong-text-color);
   font-size: 32px;
   font-family: 'DM Sans';
   font-style: normal;
@@ -22,30 +40,33 @@
   line-height: 38px;
   letter-spacing: -1.28px;
 
-  @media (min-width: 366px) and (max-width: 768px) {
+  @media (min-width: $mobile) and (max-width: $tablet) {
+    padding-left: 32px;
     margin-bottom: 140px;
     font-size: 48px;
     line-height: 52px;
     letter-spacing: -1.92px;
   }
 
-  @media (min-width: 769px) and (max-width: 1440px) {
+  @media (min-width: $tablet) {
+    padding-left: 15px;
     margin-bottom: 140px;
     font-size: 48px;
     line-height: 52px;
     letter-spacing: -1.92px;
+    padding-left: 40px;
   }
 }
 
 .sh-list-span {
-  color: #4f2ee8;
+  color: var(--accent-text-color);
 }
 
 .shopping-empty-text {
   margin-bottom: 14px;
   margin-top: 0;
   width: 244px;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--main-text-color);
   text-align: center;
   font-size: 14px;
   font-family: 'DM Sans';
@@ -54,35 +75,157 @@
   line-height: 18px;
   letter-spacing: -0.28px;
 
-  @media (min-width: 366px) and (max-width: 768px) {
+  @media (min-width: 366px) and (max-width: $tablet) {
     width: 349px;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: -0.36px;
   }
 
-  @media (min-width: 769px) and (max-width: 1440px) {
-    width: 349px;
-    font-size: 18px;
-    line-height: 24px;
-    letter-spacing: -0.36px;
-  }
+  // @media (min-width: 769px) and (max-width: $desktop) {
+  //   width: 349px;
+  //   font-size: 18px;
+  //   line-height: 24px;
+  //   letter-spacing: -0.36px;
+  // }
 }
 
-@media (max-width: 365px) {
+@media (max-width: $mobile) {
   .shopping-empty-image {
     width: 275px;
   }
 }
 
-@media (min-width: 366px) and (max-width: 768px) {
+@media (min-width: $mobile) and (max-width: $tablet) {
   .shopping-empty-image {
     width: 322px;
   }
 }
 
-@media (min-width: 769px) and (max-width: 1440px) {
+@media (min-width: 769px) and (max-width: $desktop) {
   .shopping-empty-image {
     width: 322px;
   }
+}
+
+/* cardlist */
+.shopping-cardlist-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shopping-list-cardlist {
+  @media (min-width: $mobile) and (max-width: $tablet) {
+  }
+
+  @media (min-width: $tablet) {
+  }
+}
+
+.shopping-list-card {
+  padding: 14px;
+  height: 170px;
+  width: 335px;
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  border: 2px solid rgba(79, 46, 232, 0.4);
+  background: var(--body-background-color-light);
+
+  @media (min-width: $mobile) and (max-width: $tablet) {
+    height: 213px;
+    width: 704px;
+  }
+
+  @media (min-width: $tablet) {
+    height: 213px;
+    width: 996px;
+  }
+}
+
+.shopping-list-cardlogo {
+  width: 100px;
+  height: 142px;
+
+  @media (min-width: $mobile) and (max-width: $tablet) {
+    width: 116px;
+    height: 165px;
+  }
+
+  @media (min-width: $tablet) {
+    width: 116px;
+    height: 165px;
+  }
+}
+
+.shopping-list-fullinfo {
+  margin-left: 14px;
+}
+
+.shopping-list-cardheaer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.shopping-list-cardtitle {
+  color: var(--strong-text-color);
+  font-size: 16px;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+  margin: 0px 0px 4px 0px;
+}
+
+.shopping-list-cardcategory {
+  margin: 0px;
+  color: var(--main-text-color);
+  font-size: 12px;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.36px;
+}
+
+.shopping-list-carddescription {
+  max-width: 193px;
+  max-height: 68px;
+  overflow: hidden;
+  overflow-y: scroll;
+  margin: 0px 0px 14px 0px;
+  overflow: hidden;
+  color: var(--strong-text-color);
+  text-overflow: ellipsis;
+  // whitespace: nowrap;
+  font-size: 14px;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.56px;
+}
+
+.shopping-list-cardfooter {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.shopping-list-cardauthor {
+  margin: 0px;
+  color: var(--main-text-color);
+  font-size: 12px;
+  font-family: DM Sans;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.48px;
+}
+
+.shopping-list-shops {
+  display: flex;
 }
