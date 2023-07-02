@@ -1,3 +1,13 @@
+.categories_section {
+    margin-top: 40px;
+}
+
+.categories .container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
 .allcat_h3 {
     color: var(--violet);
     font-size: 16px;
@@ -6,17 +16,21 @@
     line-height: 18px;
     letter-spacing: -0.32px;
     text-transform: uppercase;
-
+    margin-bottom: 24px;
 
 }
+
 .categories-container {
+    width: 335px;
+    height: 228px;
+    overflow-y: auto;
 }
-
 .category-row {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
+
 .categories-container button {
     color: rgba(17, 17, 17, 0.60);
     font-family: DM Sans;
@@ -28,3 +42,14 @@
     text-align: left;
 }
 
+@media screen and (min-width: 768) {
+    .categories-container {
+        height: 472px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .categories-container {
+        width: 356px;
+    }
+}
