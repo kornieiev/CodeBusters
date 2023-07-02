@@ -1,7 +1,8 @@
-.section_cat {
+/* ці параметри забиті в common.scss -> .container */
+/* .section_cat {
     padding-top: 40px;
     padding-bottom: 40px;
-}
+} */
 
 .categories_list .container {
     display: flex;
