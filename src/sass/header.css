@@ -202,6 +202,7 @@
 .logout-button {
     padding: 14px 24px;
     height: 48px;
+    width: -moz-fit-content;
     width: fit-content;
     display: flex;
     align-items: center;
