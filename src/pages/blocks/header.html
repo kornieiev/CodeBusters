@@ -5,18 +5,19 @@
 <section class="section header">
   
   <nav class="header-navigation">
-    <a href="" class="logo-link">
-        <svg class="logo-icon" width="24px" height="24px"><use href="/src/images/sprite.svg#icon-logo"></use>></svg><svg class="logo-text" width="77px" height="13px"><use href="/src/images/sprite.svg#icon-bookshelf"></use>></svg>
+    <a href="/src/index.html" class="logo-link">
+        <svg class="logo-icon" width="24px" height="24px"><use href="/src/images/sprite.svg#icon-logo"></use>></svg><svg class="logo-text" width="77px" height="13px"><use href="/src/images/sprite.svg#icon-bookshelf"></use></svg>
     </a>
-    <ul class="navigation-menu">
+    <ul class="navigation navigation-menu">
         <li class="navigation-menu-item">
-            <button type="button" class="page-button active">HOME</button>
+            <a type="button" class="page-button active" href="/src/index.html">HOME</a>
         </li>
         <li class="navigation-menu-item">
-            <button type="button" class="page-button cart">
+            <a type="button" class="page-button cart" href="/src/pages/shoplist.html">
                 <span class="shopping-list-text">SHOPPING LIST</span>
                 <svg class="shopping-list-icon" width="20px" height="20px"><use href="/src/images/sprite.svg#icon-cart"></use></svg>
-            </button>
+                <!-- <svg class="shopping-list-circle" width="10px" height="10px"><use href="/src/images/sprite.svg#icon-circle"></use></svg> -->
+            </a>
         </li>
     </ul>
   </nav>
@@ -26,8 +27,11 @@
         <input id="switch-theme" type="checkbox" name="switch-theme" class="switch-theme-check">
         <label for="switch-theme" class="switch-theme-check-desc"></label>
     </div>
-    <a href="" class="menu-link">
+    <a href="" class="menu-burger-link">
       <svg class="burger-menu-icon" width="28px" height="28px"><use href="/src/images/sprite.svg#icon-burger"></use></svg>
+    </a>
+    <a href="" class="menu-close-link visually-hidden">
+      <svg class="close-menu-icon" width="28px" height="28px"><use href="/src/images/sprite.svg#icon-x-close"></use></svg>
     </a>
     <button type="button" class="user-account-button">
       <svg class="user-icon" width="37px" height="37px"><use href="/src/images/sprite.svg#icon-user"></use></svg>
@@ -47,15 +51,16 @@
         <span class="user_name">User</span>
       </div>
       
-      <ul class="navigation-drop-menu">
+      <ul class="navigation navigation-drop-menu">
         <li class="navigation-menu-item">
-            <button class="page-button active dropdown">HOME</button>
+            <a href="/src/index.html" class="page-button active dropdown">HOME</a>
         </li>
         <li class="navigation-menu-item">
-            <button class="page-button cart dropdown">
+            <a href="/src/pages/shoplist.html" class="page-button cart dropdown">
                 <span class="shopping-list-text">SHOPPING LIST</span>
                 <svg class="shopping-list-icon dropdown" width="20px" height="20px"><use href="/src/images/sprite.svg#icon-cart"></use></svg>
-            </button>
+                <!-- <svg class="shopping-list-circle" width="10px" height="10px"><use href="/src/images/sprite.svg#icon-circle"></use></svg> -->
+            </a>
         </li>
       </ul>
     </div>
@@ -68,8 +73,6 @@
     </button>
   </div>
 
-  
-  
 </div>
 
 <script type="module" src="/src/components/header.js"></script>

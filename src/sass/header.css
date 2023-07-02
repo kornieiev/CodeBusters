@@ -4,6 +4,7 @@
 
 .section.header {
     position: sticky;
+    z-index: 10;
     top: 0;
     padding: 18px 20px;
     border: 2px solid #111;
@@ -101,9 +102,14 @@
     stroke: black;
 }
 
+.close-menu-icon {
+    stroke: #000;
+}
+
 .page-button {
     padding: 7px 16px;
     height: 34px;
+    width: fit-content;
     display: flex;
     align-items: center;
     background-color: transparent;
@@ -125,6 +131,11 @@
     background-color: #EAC645;
 }
 
+/* .shopping-list-circle {
+    align-self: start;
+    fill: #4F2EE8;
+} */
+
 .user_name {
     margin-right: 4px;
     color: #FFF;
@@ -134,12 +145,10 @@
     letter-spacing: -0.44px;
 }
 
-
 /* Dropdown */
 
 .dropdown-menu {
     position: relative;
-    z-index: -1;
     top: -72px;
     height: 100vh;
     background-image: url(/src/images/group-min.png), 
@@ -149,7 +158,6 @@
     background-repeat: no-repeat;
     overflow: hidden; 
 }
-
 
 .dropdown-container {
     padding: 92px 20px 20px 20px;
@@ -181,16 +189,14 @@
 
 .page-button.dropdown {
     color: #FFF;
+    fill: #FFF;
 }
 
 .page-button.dropdown.active {
     position: relative;
     left: 16px;
     color: #000;
-}
-
-.shopping-list-icon.dropdown {
-    fill: #FFF;
+    fill: #111;
 }
 
 .logout-button {
@@ -209,7 +215,6 @@
     line-height: 1.29;
     letter-spacing: -0.56px;
 }
-
 
 /* Media */
 
@@ -230,7 +235,7 @@
         padding-inline-start: 0;
     }
 
-    .menu-link {
+    .menu-burger-link {
         display: none;
     }
 
