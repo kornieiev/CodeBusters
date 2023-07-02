@@ -1,36 +1,34 @@
 import Notiflix from "notiflix";
 import axios from "axios";
+import {getCategories} from '../api/index'
 import {getBooksByCategory} from '../api/index'
 
-const baseUrl = 'https://books-backend.p.goit.global/books';
-
-function fetchCategories() {
-  axios.get(`${baseUrl}/category-list`)
+const displayCategories = () => {
+  getCategories()
     .then(response => {
       const categories = response.data;
-      const categoriesContainer = document.getElementById('categories-container');
+      const categoryList = document.getElementById('categories-container');
       const categoryRow = document.createElement('div');
       categoryRow.classList.add('category-row');
 
       categories.forEach(category => {
         const categoryButton = document.createElement('button');
         categoryButton.innerText = category.list_name;
-        categoryButton.addEventListener('click', () => fetchBooksByCategory(category.list_name));
+        categoryButton.addEventListener('click', () => displayBooksByCategory(category.list_name));
         categoryRow.appendChild(categoryButton);
-      });
-
-      categoriesContainer.appendChild(categoryRow);
+      })
+      categoryList.appendChild(categoryRow);
     })
     .catch(error => {
-      Notiflix.Notify.failure('Помилка при отриманні категорій книг');
+      console.log(error);
     });
-}
+};
 
-function fetchBooksByCategory(category) {
-  const booksContainer = document.getElementById('books-container');
+const displayBooksByCategory = (category) => {
+  const booksContainer = document.getElementById('books-list');
   booksContainer.innerHTML = '';
 
-  axios.get(`${baseUrl}/category?category=${category}`)
+  getBooksByCategory(category)
     .then(response => {
       const booksData = response.data;
       if (booksData.length === 0) {
@@ -46,8 +44,8 @@ function fetchBooksByCategory(category) {
       }
     })
     .catch(error => {
-      console.error('Помилка при отриманні книг:', error);
+      console.log(error);
     });
-}
+};
 
-fetchCategories();
+displayCategories();
