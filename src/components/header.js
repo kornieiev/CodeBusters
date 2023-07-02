@@ -33,6 +33,7 @@ function toggleDropMenu (event) {
     dropMenuEl.classList.toggle('visually-hidden');
     burgerEl.classList.toggle('visually-hidden');
     closeEl.classList.toggle('visually-hidden');
+    document.body.classList.toggle('no-scroll');
 
     // if (element.classList.contains('visible')) {
     //     disableScroll();
