@@ -9,13 +9,13 @@
     /* margin: 0; */
 }
 
-.categories-container {
+.category-list {
     width: 335px;
     height: 228px;
     overflow-y: auto;
 }
 
-.cat_list_h3 {
+.allcat_h3 {
     color: var(--violet);
     font-size: 16px;
     font-family: DM Sans;
@@ -54,14 +54,14 @@
         width: -moz-fit-content;
         width: fit-content;
     } */
-    .categories-container {
+    .category-list {
         height: 472px;
     }
 
 }
 
 @media screen and (min-width: 1200px) {
-    .categories-container {
+    .category-list {
         width: 356px;
     }
 } 
