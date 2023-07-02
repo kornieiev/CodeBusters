@@ -3,9 +3,7 @@
 }
 
 .shopping-list-left {
-}
-@media (max-width: 1199px) {
-  .shopping-list-left {
+  @media (max-width: 1199px) {
     // display: none;
     position: absolute;
     white-space: nowrap;
@@ -25,12 +23,8 @@
 }
 
 .shopping-list {
-  @media (min-width: $tablet) and (max-width: 1199px) {
-    padding: 0 32px;
-  }
-
   @media (min-width: $desktop) {
-    padding: 0 24px;
+    padding-left: 24px;
   }
 }
 
