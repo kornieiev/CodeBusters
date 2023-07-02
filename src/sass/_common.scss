@@ -10,6 +10,15 @@
     url('../fonts/DMSans-Regular.ttf') format('ttf');
 }
 
+*::-webkit-scrollbar {
+  width: 8px
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scroolbar-color);
+  border-radius: 4px
+}
+
 /* default font */
 .page {
   font-family: 'DM Sans';
@@ -20,9 +29,9 @@
 }
 
 // breakpoints
-$mobile: 480px;
+$mobile: 375px;
 $tablet: 768px;
-$desktop: 1440px;
+$desktop: 1200px;
 
 .container {
   // display: flex;
@@ -30,18 +39,22 @@ $desktop: 1440px;
   width: 100%;
   padding: 0 20px;
   margin: 0 auto;
+
   @media screen and (max-width: 767px) {
     max-width: $mobile;
   }
+
   @media screen and (min-width: $tablet) {
-    width: $tablet;
+    max-width: $tablet;
     padding: 0 32px;
   }
+
   @media screen and (min-width: $desktop) {
-    width: $desktop;
+    max-width: $desktop;
     padding: 0 24px;
   }
 }
+
 
 /* reset button styles */
 button {
