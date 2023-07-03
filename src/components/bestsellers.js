@@ -4,8 +4,9 @@ const categories = document.querySelectorAll(".bestsellers-item-name")
 const titles = document.querySelectorAll(".bookcard-name")
 const authors = document.querySelectorAll(".bookcard-author")
 const images = document.querySelectorAll(".bookcard-image")
+const ids = document.querySelectorAll(".bookcard")
 
-getBookcard(categories, titles, authors, images)
+getBookcard(categories, titles, authors, images, ids)
 
 
 

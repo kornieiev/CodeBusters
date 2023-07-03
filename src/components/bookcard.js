@@ -1,6 +1,6 @@
 import { getBooksByCategory } from "../api";
 
-export function getBookcard(categories, titles, authors, images) {
+export function getBookcard(categories, titles, authors, images, ids) {
     
         let category = categories[0].textContent;
         getBooksByCategory(category)
@@ -13,6 +13,8 @@ export function getBookcard(categories, titles, authors, images) {
                     images[i].src = arr[a].book_image
                     titles[i].textContent = arr[a].title
                     authors[i].textContent = arr[a].author
+                    ids[i].id = arr[a]._id
+                   
                     const b = arr.indexOf(arr[a])
                     arr.splice(b, 1);
                 }
@@ -32,6 +34,7 @@ export function getBookcard(categories, titles, authors, images) {
                     images[i].src = arr[a].book_image
                     titles[i].textContent = arr[a].title
                     authors[i].textContent = arr[a].author
+                    ids[i].id = arr[a]._id
                     const b = arr.indexOf(arr[a])
                     arr.splice(b, 1);
                 }
@@ -51,6 +54,7 @@ export function getBookcard(categories, titles, authors, images) {
                     images[i].src = arr[a].book_image
                     titles[i].textContent = arr[a].title
                     authors[i].textContent = arr[a].author
+                    ids[i].id = arr[a]._id
                     const b = arr.indexOf(arr[a])
                     arr.splice(b, 1);
                 }
@@ -70,6 +74,7 @@ export function getBookcard(categories, titles, authors, images) {
                     images[i].src = arr[a].book_image
                     titles[i].textContent = arr[a].title
                     authors[i].textContent = arr[a].author
+                    ids[i].id = arr[a]._id
                     const b = arr.indexOf(arr[a])
                     arr.splice(b, 1);
                 }
