@@ -2,7 +2,7 @@ import './components/loader';
 import './components/support-ukraine/support-array';
 import './components/support-ukraine/support';
 import './components/categories';
-import './components/bookcard'
+import './components/bookcard';
 import './components/bestsellers';
 ////////////////////////////////////////// тест коду api
 // import { getCategories } from '../src/api';
@@ -19,5 +19,6 @@ import './components/bestsellers';
 // })();
 //////////////////////////////////////////////////////
 
-
 import './components/support-ukraine/support-swiper';
+
+import './components/theme';
