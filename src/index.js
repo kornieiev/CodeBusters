@@ -4,7 +4,6 @@ import './components/support-ukraine/support';
 import './components/categories_list';
 import './components/category';
 import './components/bookcard';
-import './components/bookcard';
 import './components/bestsellers';
 ////////////////////////////////////////// тест коду api
 // import { getCategories } from '../src/api';
