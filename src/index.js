@@ -4,6 +4,8 @@ import './components/support-ukraine/support';
 import './components/categories_list';
 import './components/category';
 import './components/bookcard'
+import './components/categories';
+import './components/bookcard';
 import './components/bestsellers';
 ////////////////////////////////////////// тест коду api
 // import { getCategories } from '../src/api';
@@ -20,5 +22,6 @@ import './components/bestsellers';
 // })();
 //////////////////////////////////////////////////////
 
-
 import './components/support-ukraine/support-swiper';
+
+import './components/theme';
