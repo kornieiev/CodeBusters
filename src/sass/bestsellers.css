@@ -5,7 +5,7 @@
   align-items: flex-start;
   gap: 10px;
   border-radius: 40px;
-  border: 2px solid var(--violet);
+  border: 2px solid var(--text-color-hover);
   color: var(--black);
   font-size: 14px;
   font-family: DM Sans;
@@ -16,7 +16,7 @@
   text-transform: uppercase;
   position: sticky;
   left: 1500px;
-  background-color: var(--white);
+  background-color: var(--bg-color-one);
 }
 .bookcard-image {
   width: 335px;
@@ -31,7 +31,7 @@
 .bestsellers-item-name {
   margin: 40px 0 18px 0;
   height: 18px;
-  color: var(--main-text-color);
+  color: var(--text-color-three);
   font-size: 14px;
   font-family: DM Sans;
   font-style: normal;
@@ -51,10 +51,10 @@
   column-gap: 4px;
 }
 .bestsellers-name-first {
-  color: var(--black);
+  color: var(--text-color-two);
 }
 .bestsellers-name-second {
-  color: var(--violet);
+  color: var(--text-color-hover);
 }
 .bestsellers {
   display: flex;
@@ -69,7 +69,7 @@
   height: 54px;
   flex-shrink: 0;
   border-radius: 54px;
-  background: #4f2ee8;
+  background: var(--text-color-hover);
   position: sticky;
   bottom: 140px;
   left: 1000px;
