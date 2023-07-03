@@ -126,7 +126,7 @@
   align-items: center;
   border-radius: 16px;
   border: 2px solid rgba(79, 46, 232, 0.4);
-  background: var(--body-background-color-light);
+  background: var(--white);
 
   @media (min-width: $tablet) and (max-width: 1199px) {
     width: 704px;
@@ -284,8 +284,8 @@
 .shopping-list-shopsicon2 {
   color: black;
   @media (min-width: $tablet) {
-    width: 28px;
-    height: 28px;
+    // width: 28px;
+    // height: 28px;
   }
 }
 
