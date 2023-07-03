@@ -1,0 +1,283 @@
+.modal-overlay {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 20;
+    transition: .3s all;
+}
+
+.modal-overlay-open {
+    visibility: visible;
+}
+
+.stop-overflow {
+    overflow: hidden;
+    
+}
+.modal-window-container {
+    /* можливий скролл модального вікна */
+    /* overflow: auto; */
+    position: absolute;
+    width: 335px;
+    height: 806px;
+    border: 2px solid #111111;
+    border-radius: 18px;
+    background-color: #ffffff;
+    visibility: hidden;
+
+    /* центрування */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+}
+
+@media screen and (min-width: 768px) {
+    .modal-window-container {
+        padding: 40px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        width: 580px;
+        height: 465px;
+    }   
+}
+
+.modal-add-btn {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    padding: 14px 22px;
+    /* border: 2px solid #4f2ee8; */
+    border-radius: 40px;
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(18 / 14);
+    letter-spacing: -0.01em;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 300ms linear;
+
+    margin-bottom: 8px;
+
+    background-color: transparent;
+    border: 2px solid rgba(17, 17, 17, 0.4);
+    color:rgba(17, 17, 17, 0.4);
+    box-shadow: none;
+    cursor: unset;
+}
+
+@media screen and (min-width: 768px) {
+    .modal-add-btn {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+        font-size: 18px;
+        line-height: calc(24 / 18);
+        background-color: transparent;
+    }
+}
+
+.modal-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.popup {
+    width: 335px;
+    height: 762px;
+    /* visibility: hidden; */
+}
+
+.open-modal {
+    visibility: visible;
+}
+
+.modal-book-info {
+    margin-left: 24px;
+}
+
+@media screen and (min-width: 768px) {
+    .modal-book-info {
+        margin-left: 0;
+        display: flex;
+    }  
+}
+
+.modal-image {
+    width: 287px;
+    /* display: flex;
+    justify-content: center; */
+    margin-top: 40px;
+    /* margin-left: 24px; */
+    margin-bottom: 14px;
+}
+
+@media screen and (min-width: 768px) {
+    .modal-image {
+        width: 192px;
+        /* margin-left: 40px; */
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+}
+
+.modal-book-name {
+    width: 128px;
+    height: 18px;
+
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.04em;
+    text-align: left;
+
+    margin-bottom: 4px;
+}
+
+@media screen and (min-width: 768px) {
+    .modal-book-name {
+        width: 192px;
+        /* margin-left: 40px; */
+        margin-top: 0;
+        margin-bottom: 0;
+
+        font-family: DM Sans;
+
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: -0.04em;
+        text-align: left;
+
+        width: 192px;
+        height: 28px;
+    }
+}
+
+.modal-author {
+    width: 79px;
+    height: 14px;
+
+    font-family: DM Sans;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: -0.04em;
+    text-align: left;
+
+    margin-bottom: 18px;
+}
+
+@media screen and (min-width: 768px) {
+    .modal-author {
+        font-family: DM Sans;
+        font-size: 14px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: -0.04em;
+        text-align: left;
+
+        width: 92px;
+        height: 18px;
+    }
+}
+
+.modal-description {
+    width: 287px;
+    height: 70px;
+    /* top: 516px;
+    left: 24px; */
+    
+    font-family: DM Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.04em;
+    text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+    .modal-description {
+        font-family: DM Sans;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: -0.04em;
+        text-align: left;
+
+        width: 279px;
+        height: 70px;
+        /* top: 114px
+        left: 256px */
+    }
+}
+
+.congrats-text {
+    width: 242px;
+    height: 36px;
+    /* top: 730px
+    left: 47px */
+
+    font-family: DM Sans;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: -0.04em;
+    text-align: center;
+
+    margin-left: 47px;
+}
+
+@media screen and (min-width: 768px) {
+    .congrats-text {
+        font-family: DM Sans;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: -0.04em;
+        text-align: center;
+
+        width: 324px;
+        height: 28px;
+        /* top: 433px
+        left: 128px */
+
+        margin-left: 81px;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .tablet-modal-container  {
+        margin-left: 24px;
+    }
+}
+
+.modal-add-btn:hover,
+.modal-add-btn:focus {
+    /* background-color: transparent;
+    border: 2px solid rgba(17, 17, 17, 0.4);
+    color:rgba(17, 17, 17, 0.4);
+    box-shadow: none;
+    cursor: unset; */
+    border: 2px solid var(--text-color-hover);
+    color:  var(--text-color-hover);
+}
