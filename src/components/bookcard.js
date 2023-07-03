@@ -1,6 +1,6 @@
 import { getBooksByCategory } from "../api";
 
-export function getBookcard(categories, titles, authors, images, ) {
+export function getBookcard(categories, titles, authors, images) {
     
         let category = categories[0].textContent;
         getBooksByCategory(category)
