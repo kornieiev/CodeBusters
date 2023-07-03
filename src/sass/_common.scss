@@ -10,6 +10,10 @@
     url('../fonts/DMSans-Regular.ttf') format('ttf');
 }
 
+body {
+  background-color: var(--bg-color-one);
+}
+
 *::-webkit-scrollbar {
   width: 8px;
 }
