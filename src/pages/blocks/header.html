@@ -13,7 +13,23 @@
       </svg>
     </a>
 
-    <ul class="navigation navigation-menu">
+    
+    
+    <ul class="navigation navigation-menu visually-hidden save">
+        <li class="navigation-menu-item">
+            <a type="button" class="page-button active" href="/src/index.html">HOME</a>
+        </li>
+        <li class="navigation-menu-item">
+            <a type="button" class="page-button cart" href="/src/pages/shoplist.html">
+                <span class="shopping-list-text">SHOPPING LIST</span>
+                <svg class="shopping-list-icon" width="20px" height="20px"><use href="/src/images/sprite.svg#icon-cart"></use></svg>
+                <!-- <svg class="shopping-list-circle" width="10px" height="10px"><use href="/src/images/sprite.svg#icon-circle"></use></svg> -->
+            </a>
+        </li>
+
+    
+
+<!--     <ul class="navigation navigation-menu">
       <li class="navigation-menu-item">
         <a type="button" class="page-button active" href="/src/index.html"
           >HOME</a
@@ -31,7 +47,9 @@
           </svg>
           <!-- <svg class="shopping-list-circle" width="10px" height="10px"><use href="/src/images/sprite.svg#icon-circle"></use></svg> -->
         </a>
-      </li>
+      </li> -->
+
+
     </ul>
   </nav>
 
@@ -45,31 +63,67 @@
       />
       <label for="switch-theme" class="switch-theme-check-desc"></label>
     </div>
-    <a href="" class="menu-burger-link" data-modal-open>
+
+    <a href="" class="menu-burger-link">
+      <svg class="burger-menu-icon" width="28px" height="28px"><use href="/src/images/sprite.svg#icon-burger"></use></svg>
+
+    
+<!--     <a href="" class="menu-burger-link" data-modal-open>
       <svg class="burger-menu-icon" width="28px" height="28px">
         <use href="/src/images/sprite.svg#icon-burger"></use>
-      </svg>
+      </svg> -->
+
+    
     </a>
     <a href="" class="menu-close-link visually-hidden">
       <svg class="close-menu-icon" width="28px" height="28px">
         <use href="/src/images/sprite.svg#icon-x-close"></use>
       </svg>
     </a>
-    <button type="button" class="user-account-button">
+
+    <button type="button" class="authorization-btn header save">
+      <span>Sign up</span>
+      <svg width="20px" height="20px">
+        <use href="/src/images/sprite.svg#icon-arrow-narrow-right"></use>
+      </svg>
+    </button>
+
+    <div class="logout-group visually-hidden">
+      <button type="button" class="logout-button header">
+        <span>Log out</span>
+        <svg width="20px" height="20px">
+          <use href="/src/images/sprite.svg#icon-arrow-narrow-right"></use>
+        </svg>
+      </button>
+      <button type="button" class="asking-logout dark">Yes</button>
+      <button type="button" class="asking-logout light">No</button>
+    </div>
+    
+
+
+    <button type="button" class="user-account-button visually-hidden save">
+      <img src="/src/images/stephen.png" alt="User" class="user-icon">
+      <span class="user-name save">User</span>
+      <svg class="user-menu-icon" width="23px" height="26px"><use href="/src/images/sprite.svg#icon-caret-down"></use></svg>
+<!--     <button type="button" class="user-account-button">
       <svg class="user-icon" width="37px" height="37px">
         <use href="/src/images/sprite.svg#icon-user"></use>
       </svg>
       <span class="user_name">User</span>
       <svg class="user-menu-icon" width="23px" height="26px">
         <use href="/src/images/sprite.svg#icon-caret-down"></use>
-      </svg>
+      </svg> -->
     </button>
   </div>
 </section>
 
+<!--------------- Dropdown ----------------->
+
 <div class="dropdown-menu visually-hidden">
   <div class="dropdown-container">
-    <div class="top-block">
+    <button type="button" class="authorization-btn dropdown">
+      <span>Sign up</span>
+<!--     <div class="top-block">
       <div class="user-info">
         <svg class="user-icon" width="37px" height="37px">
           <use href="/src/images/sprite.svg#icon-user"></use>
@@ -94,11 +148,43 @@
     </div>
 
     <button type="button" class="logout-button">
-      <span>Log out</span>
+      <span>Log out</span> -->
       <svg width="20px" height="20px">
         <use href="/src/images/sprite.svg#icon-arrow-narrow-right"></use>
       </svg>
     </button>
+
+    <div class="dropdown-authorized visually-hidden">
+      <div class="top-block">
+        <div class="user-info">
+          <img src="/src/images/stephen.png" alt="User">
+          <span class="user-name">User</span>
+        </div>
+        
+        <ul class="navigation navigation-drop-menu">
+          <li class="navigation-menu-item">
+              <a href="/src/index.html" class="page-button active dropdown">HOME</a>
+          </li>
+          <li class="navigation-menu-item">
+              <a href="/src/pages/shoplist.html" class="page-button cart dropdown">
+                  <span class="shopping-list-text">SHOPPING LIST</span>
+                  <svg class="shopping-list-icon dropdown" width="20px" height="20px"><use href="/src/images/sprite.svg#icon-cart"></use></svg>
+                  <!-- <svg class="shopping-list-circle" width="10px" height="10px"><use href="/src/images/sprite.svg#icon-circle"></use></svg> -->
+              </a>
+          </li>
+        </ul>
+      </div>
+      
+      <button type="button" class="logout-button dropdown">
+        <span>Log out</span>
+        <svg width="20px" height="20px">
+          <use href="/src/images/sprite.svg#icon-arrow-narrow-right"></use>
+        </svg>
+      </button>
+
+    </div>
+    
+   
   </div>
 </div>
 
@@ -117,7 +203,11 @@
     <form name="sign-up" class="sign-up-form">
       <ul class="sign-up-list-form">
         <li>
-          <input
+          <input id="user_name" type="text" class="modal-input" autocomplete="off" placeholder="NAME" required >
+        </li>
+        <li>
+          <input id="user_email" type="text" class="modal-input" autocomplete="off" placeholder="EMAIL" required >
+<!--           <input
             id="user_name"
             type="text"
             class="modal-input"
@@ -132,19 +222,20 @@
             class="modal-input"
             placeholder="EMAIL"
             required
-          />
+          /> -->
           <svg width="18px" height="18px" class="sign-up-icon mail">
             <use href="/src/images/sprite.svg#icon-mail"></use>
           </svg>
         </li>
         <li>
-          <input
+          <input id="user_password" type="text" class="modal-input" autocomplete="off" placeholder="PASSWORD" required >
+<!--           <input
             id="user_email"
             type="text"
             class="modal-input"
             placeholder="PASSWORD"
             required
-          />
+          /> -->
           <svg width="18px" height="18px" class="sign-up-icon lock">
             <use href="/src/images/sprite.svg#icon-lock"></use>
           </svg>
@@ -174,7 +265,14 @@
 
     <h3 class="header-sign-up visually-hidden">Sign up</h3>
 
-    <form name="sign-up" class="sign-up-form">
+    <form name="sign-up" class="sign-up-form in">
+      <ul class="sign-up-list-form">
+        <li>
+          <input id="user_name" type="text" class="modal-input" autocomplete="off" placeholder="NAME" required >
+        </li>
+        <li>
+          <input id="user_password" type="text" class="modal-input" autocomplete="off" placeholder="PASSWORD" required >
+<!--     <form name="sign-up" class="sign-up-form">
       <ul class="sign-up-list-form">
         <li>
           <input
@@ -192,7 +290,7 @@
             class="modal-input"
             placeholder="PASSWORD"
             required
-          />
+          /> -->
           <svg width="18px" height="18px" class="sign-up-icon lock sign-in">
             <use href="/src/images/sprite.svg#icon-lock"></use>
           </svg>
@@ -211,4 +309,4 @@
 </div>
 
 <script type="module" src="/src/components/header.js"></script>
-<script type="module" src="/src/components/signup-in-modal.js"></script>
+
