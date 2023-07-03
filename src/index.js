@@ -3,8 +3,7 @@ import './components/support-ukraine/support-array';
 import './components/support-ukraine/support';
 import './components/categories_list';
 import './components/category';
-import './components/bookcard'
-import './components/categories';
+import './components/bookcard';
 import './components/bookcard';
 import './components/bestsellers';
 ////////////////////////////////////////// тест коду api
