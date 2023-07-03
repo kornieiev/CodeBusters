@@ -170,6 +170,9 @@
 }
 
 .deletecard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 28px;
   height: 28px;
   flex-shrink: 0;
@@ -206,6 +209,13 @@
   letter-spacing: 0.36px;
 }
 
+.shopping-list-icon {
+  @media (min-width: $tablet) {
+    width: 18px;
+    height: 18px;
+  }
+}
+
 .shopping-list-carddescription {
   width: 193px;
   height: 68px;
@@ -238,7 +248,7 @@
 
 .shopping-list-cardfooter {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -255,11 +265,27 @@
 
 .shopping-list-shops {
   display: flex;
+  align-items: flex-end;
   gap: 8px;
-  border: 2px solid rgba(79, 46, 232, 0.4);
 
   @media (min-width: $tablet) {
     gap: 16px;
+  }
+}
+
+.shopping-list-shopsicon1 {
+  color: black;
+  @media (min-width: $tablet) {
+    width: 48px;
+    height: 15px;
+  }
+}
+
+.shopping-list-shopsicon2 {
+  color: black;
+  @media (min-width: $tablet) {
+    width: 28px;
+    height: 28px;
   }
 }
 
