@@ -19,7 +19,7 @@ body {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: var(--scroolbar-color);
+  background-color: var(--scroll-color);
   border-radius: 4px;
 }
 
@@ -39,16 +39,18 @@ $desktop: 1200px;
 
 .main-combined {
   display: flex;
-
+  
   @media screen and (max-width: 767px) {
     max-width: $mobile;
     flex-direction: column;
+    margin: 0 auto;
   }
 
   @media screen and (min-width: $tablet) {
     max-width: $tablet;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
   }
   @media screen and (min-width: $desktop) {
     max-width: $desktop;
@@ -78,9 +80,7 @@ $desktop: 1200px;
   // justify-content: center;
   width: 100%;
   padding: 0 20px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 40px;
+  margin: 0 auto;
 
   @media screen and (max-width: 767px) {
     max-width: $mobile;
@@ -95,6 +95,10 @@ $desktop: 1200px;
     max-width: $desktop;
     padding: 0 24px;
   }
+}
+
+section {
+  padding-bottom: 40px;
 }
 
 /* reset button styles */

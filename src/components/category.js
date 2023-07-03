@@ -1,13 +1,32 @@
 import { Notify } from 'notiflix';
-import { getBooksByCategory } from '../api/index';
+import { fetchCategoriesList, getBooksByCategory } from '../api/index';
 
-const bestSellersEl = document.querySelector('.best-sellers');
-const bestSellersItemsEl = bestSellersEl.querySelectorAll('.bestsellers-list-item');
+const categoriesListEl = document.querySelector('.categories-list');
+const categoryEl = document.querySelector('.category');
 
-bestSellersItemsEl.forEach(item => {
-  const button = item.querySelector('.bestsellers-button');
-  button.addEventListener('click', () => {
-    const categoryName = item.querySelector('.bestsellers-item-name').textContent;
-    showMoreBooks(categoryName);
-  });
-})
+categoriesListEl.addEventListener('click', onCategoryClick);
+
+let selectedCategoryName = '';
+
+async function onCategoryClick(e) {
+  e.preventDefault();
+
+  const clickedCategoryLink = e.target;
+
+  if (clickedCategoryLink.classList.contains('categories-list-link')) {
+    selectedCategoryName = clickedCategoryLink.textContent;
+  } else {
+    return;
+  }
+
+  updateActiveCategory(clickedCategoryLink);
+}
+
+function updateActiveCategory(clickedLink) {
+  const categoriesItems = categoriesListEl.querySelectorAll('.categories-item');
+
+  categoriesItems.forEach(item => item.classList.remove('active'));
+  clickedLink.parentNode.classList.add('active');
+}
+
+
