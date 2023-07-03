@@ -1,21 +1,22 @@
-/* - Перевірити на повторювані з загальними стилі
-- Перенести visually hidden з основних стилів
-- Шрифти */
-
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
+.header {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  border: 2px solid var(--elements-color);
+  border-radius: 0px 0px 8px 8px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  margin-bottom: 40px;
+  background-color: var(--bg-color-one);
 }
 
-.section.header {
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .section.header {
   position: sticky;
   z-index: 10;
   top: 0;
@@ -25,7 +26,7 @@
   display: flex;
   justify-content: space-between;
   background-color: var(--bg-color-one);
-}
+} */
 
 .header-navigation {
   display: flex;
@@ -401,9 +402,9 @@
 /* Media */
 
 @media screen and (min-width: 768px) {
-  .section.header {
-    padding: 14px 32px;
-    height: 72px;
+  .header {
+    padding-top: 14px;
+    padding-bottom: 13px;
   }
 
   .header-navigation {

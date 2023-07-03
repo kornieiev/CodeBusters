@@ -1,9 +1,9 @@
 <!-- HTML-блок для HEADER -->
 
 <h2 class="visually-hidden">Webpage navigation</h2>
-
-<section class="section header">
-  <nav class="header-navigation">
+<header class="header">
+  <div class="header-container container">
+    <nav class="header-navigation">
     <a href="/src/index.html" class="logo-link">
       <svg class="logo-icon" width="24px" height="24px">
         <use href="/src/images/sprite.svg#icon-logo"></use>
@@ -65,42 +65,9 @@
       </svg>
     </button>
   </div>
-</section>
-
-<div class="dropdown-menu visually-hidden">
-  <div class="dropdown-container">
-    <div class="top-block">
-      <div class="user-info">
-        <svg class="user-icon" width="37px" height="37px">
-          <use href="/src/images/sprite.svg#icon-user"></use>
-        </svg>
-        <span class="user_name">User</span>
-      </div>
-
-      <ul class="navigation navigation-drop-menu">
-        <li class="navigation-menu-item">
-          <a href="/src/index.html" class="page-button active dropdown">HOME</a>
-        </li>
-        <li class="navigation-menu-item">
-          <a href="/src/pages/shoplist.html" class="page-button cart dropdown">
-            <span class="shopping-list-text">SHOPPING LIST</span>
-            <svg class="shopping-list-icon dropdown" width="20px" height="20px">
-              <use href="/src/images/sprite.svg#icon-cart"></use>
-            </svg>
-            <!-- <svg class="shopping-list-circle" width="10px" height="10px"><use href="/src/images/sprite.svg#icon-circle"></use></svg> -->
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <button type="button" class="logout-button">
-      <span>Log out</span>
-      <svg width="20px" height="20px">
-        <use href="/src/images/sprite.svg#icon-arrow-narrow-right"></use>
-      </svg>
-    </button>
   </div>
-</div>
+</header>
+
 
 <!-- Modal 1 -->
 
