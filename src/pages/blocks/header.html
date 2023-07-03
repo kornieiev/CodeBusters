@@ -3,11 +3,17 @@
 <h2 class="visually-hidden">Webpage navigation</h2>
 
 <section class="section header">
-  
   <nav class="header-navigation">
     <a href="/src/index.html" class="logo-link">
-        <svg class="logo-icon" width="24px" height="24px"><use href="/src/images/sprite.svg#icon-logo"></use>></svg><svg class="logo-text" width="77px" height="13px"><use href="/src/images/sprite.svg#icon-bookshelf"></use></svg>
+      <svg class="logo-icon" width="24px" height="24px">
+        <use href="/src/images/sprite.svg#icon-logo"></use>
+      </svg>
+      <svg class="logo-text" width="77px" height="13px">
+        <use href="/src/images/sprite.svg#icon-bookshelf"></use>
+      </svg>
     </a>
+
+    
     
     <ul class="navigation navigation-menu visually-hidden save">
         <li class="navigation-menu-item">
@@ -20,19 +26,59 @@
                 <!-- <svg class="shopping-list-circle" width="10px" height="10px"><use href="/src/images/sprite.svg#icon-circle"></use></svg> -->
             </a>
         </li>
+
+    
+
+<!--     <ul class="navigation navigation-menu">
+      <li class="navigation-menu-item">
+        <a type="button" class="page-button active" href="/src/index.html"
+          >HOME</a
+        >
+      </li>
+      <li class="navigation-menu-item">
+        <a
+          type="button"
+          class="page-button cart"
+          href="/src/pages/shoplist.html"
+        >
+          <span class="shopping-list-text">SHOPPING LIST</span>
+          <svg class="shopping-list-icon" width="20px" height="20px">
+            <use href="/src/images/sprite.svg#icon-cart"></use>
+          </svg>
+          <!-- <svg class="shopping-list-circle" width="10px" height="10px"><use href="/src/images/sprite.svg#icon-circle"></use></svg> -->
+        </a>
+      </li> -->
+
+
     </ul>
   </nav>
 
   <div class="user-block">
-    <div class="switch-field"> 
-        <input id="switch-theme" type="checkbox" name="switch-theme" class="switch-theme-check">
-        <label for="switch-theme" class="switch-theme-check-desc"></label>
+    <div class="switch-field">
+      <input
+        id="switch-theme"
+        type="checkbox"
+        name="switch-theme"
+        class="switch-theme-check"
+      />
+      <label for="switch-theme" class="switch-theme-check-desc"></label>
     </div>
+
     <a href="" class="menu-burger-link">
       <svg class="burger-menu-icon" width="28px" height="28px"><use href="/src/images/sprite.svg#icon-burger"></use></svg>
+
+    
+<!--     <a href="" class="menu-burger-link" data-modal-open>
+      <svg class="burger-menu-icon" width="28px" height="28px">
+        <use href="/src/images/sprite.svg#icon-burger"></use>
+      </svg> -->
+
+    
     </a>
     <a href="" class="menu-close-link visually-hidden">
-      <svg class="close-menu-icon" width="28px" height="28px"><use href="/src/images/sprite.svg#icon-x-close"></use></svg>
+      <svg class="close-menu-icon" width="28px" height="28px">
+        <use href="/src/images/sprite.svg#icon-x-close"></use>
+      </svg>
     </a>
 
     <button type="button" class="authorization-btn header save">
@@ -59,18 +105,50 @@
       <img src="/src/images/stephen.png" alt="User" class="user-icon">
       <span class="user-name save">User</span>
       <svg class="user-menu-icon" width="23px" height="26px"><use href="/src/images/sprite.svg#icon-caret-down"></use></svg>
+<!--     <button type="button" class="user-account-button">
+      <svg class="user-icon" width="37px" height="37px">
+        <use href="/src/images/sprite.svg#icon-user"></use>
+      </svg>
+      <span class="user_name">User</span>
+      <svg class="user-menu-icon" width="23px" height="26px">
+        <use href="/src/images/sprite.svg#icon-caret-down"></use>
+      </svg> -->
     </button>
   </div>
-
 </section>
 
 <!--------------- Dropdown ----------------->
 
 <div class="dropdown-menu visually-hidden">
-
   <div class="dropdown-container">
     <button type="button" class="authorization-btn dropdown">
       <span>Sign up</span>
+<!--     <div class="top-block">
+      <div class="user-info">
+        <svg class="user-icon" width="37px" height="37px">
+          <use href="/src/images/sprite.svg#icon-user"></use>
+        </svg>
+        <span class="user_name">User</span>
+      </div>
+
+      <ul class="navigation navigation-drop-menu">
+        <li class="navigation-menu-item">
+          <a href="/src/index.html" class="page-button active dropdown">HOME</a>
+        </li>
+        <li class="navigation-menu-item">
+          <a href="/src/pages/shoplist.html" class="page-button cart dropdown">
+            <span class="shopping-list-text">SHOPPING LIST</span>
+            <svg class="shopping-list-icon dropdown" width="20px" height="20px">
+              <use href="/src/images/sprite.svg#icon-cart"></use>
+            </svg>
+            <!-- <svg class="shopping-list-circle" width="10px" height="10px"><use href="/src/images/sprite.svg#icon-circle"></use></svg> -->
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <button type="button" class="logout-button">
+      <span>Log out</span> -->
       <svg width="20px" height="20px">
         <use href="/src/images/sprite.svg#icon-arrow-narrow-right"></use>
       </svg>
@@ -108,13 +186,11 @@
     
    
   </div>
-
 </div>
 
 <!-- Modal 1 -->
 
 <div class="backdrop is-hidden" data-modal-up>
-
   <div class="sign-up-modal">
     <button type="button" class="btn-close-open" data-modal-close-up>
       <svg width="20" height="20" class="modal-close-btn">
@@ -131,38 +207,55 @@
         </li>
         <li>
           <input id="user_email" type="text" class="modal-input" autocomplete="off" placeholder="EMAIL" required >
+<!--           <input
+            id="user_name"
+            type="text"
+            class="modal-input"
+            placeholder="NAME"
+            required
+          />
+        </li>
+        <li>
+          <input
+            id="user_email"
+            type="text"
+            class="modal-input"
+            placeholder="EMAIL"
+            required
+          /> -->
           <svg width="18px" height="18px" class="sign-up-icon mail">
             <use href="/src/images/sprite.svg#icon-mail"></use>
           </svg>
-          
         </li>
         <li>
           <input id="user_password" type="text" class="modal-input" autocomplete="off" placeholder="PASSWORD" required >
+<!--           <input
+            id="user_email"
+            type="text"
+            class="modal-input"
+            placeholder="PASSWORD"
+            required
+          /> -->
           <svg width="18px" height="18px" class="sign-up-icon lock">
             <use href="/src/images/sprite.svg#icon-lock"></use>
           </svg>
-          
-
         </li>
       </ul>
-      <button type="submit" class="sign-up-btn" data-submit-open>SIGN UP</button>
+      <button type="submit" class="sign-up-btn" data-submit-open>
+        SIGN UP
+      </button>
     </form>
 
-    
-    
     <ul class="sign-list">
-     <li><a href="#" class="sign-link active">SIGN UP</a></li>
+      <li><a href="#" class="sign-link active">SIGN UP</a></li>
       <li><a href="#" class="sign-link up">SIGN IN</a></li>
-   </ul>
-
+    </ul>
   </div>
-
 </div>
 
 <!-- Modal 2 -->
 
 <div class="backdrop is-hidden" data-modal-in>
-
   <div class="sign-up-modal sign-in">
     <button type="button" class="btn-close-open" data-modal-close-in>
       <svg width="20" height="20" class="modal-close-btn">
@@ -179,23 +272,40 @@
         </li>
         <li>
           <input id="user_password" type="text" class="modal-input" autocomplete="off" placeholder="PASSWORD" required >
+<!--     <form name="sign-up" class="sign-up-form">
+      <ul class="sign-up-list-form">
+        <li>
+          <input
+            id="user_name"
+            type="text"
+            class="modal-input"
+            placeholder="NAME"
+            required
+          />
+        </li>
+        <li>
+          <input
+            id="user_email"
+            type="text"
+            class="modal-input"
+            placeholder="PASSWORD"
+            required
+          /> -->
           <svg width="18px" height="18px" class="sign-up-icon lock sign-in">
             <use href="/src/images/sprite.svg#icon-lock"></use>
           </svg>
         </li>
       </ul>
-      <button type="submit" class="sign-up-btn" data-submit-open>SIGN IN</button>
+      <button type="submit" class="sign-up-btn" data-submit-open>
+        SIGN IN
+      </button>
     </form>
 
-    
-    
     <ul class="sign-list">
-     <li><a href="" class="sign-link in">SIGN UP</a></li>
+      <li><a href="" class="sign-link in">SIGN UP</a></li>
       <li><a href="" class="sign-link active" data-modal-in>SIGN IN</a></li>
-   </ul>
-
+    </ul>
   </div>
-
 </div>
 
 <script type="module" src="/src/components/header.js"></script>

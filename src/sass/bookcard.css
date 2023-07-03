@@ -1,8 +1,9 @@
 .bookcard-image {
   border-radius: 8px;
+  position: relative;
 }
 .bookcard-name {
-  color: var(--black);
+  color: var(--text-color-two);
   font-size: 16px;
   font-family: DM Sans;
   font-style: normal;
@@ -13,7 +14,7 @@
   margin: 14px 0 4px 0;
 }
 .bookcard-author {
-  color: var(--main-text-color);
+  color: var(--text-color-three);
   font-size: 12px;
   font-family: DM Sans;
   font-style: italic;
@@ -23,4 +24,32 @@
   margin: 0;
 }
 .bookcard {
+}
+.bookcard-slider {
+  height: 52px;
+  background-color: var(--text-color-hover);
+  visibility: hidden;
+  position: inherit;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  transform: translateY(0);
+}
+.bookcard:hover .bookcard-slider {
+  display: flex;
+  visibility: visible;
+  transform: translateY(-100%);
+}
+.quick-view {
+  color: var(--black);
+  font-size: 14px;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.56px;
+  text-transform: uppercase;
 }
