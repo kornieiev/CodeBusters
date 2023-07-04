@@ -104,7 +104,11 @@ img{
     }
 }
 
-@media screen and (min-width:1440px) {
+@media screen and (min-width:1200px) {
+    .section-support {
+        padding-top: 0px;
+    }
+    
     .support {
         width: 356px;
         height: 490px;
@@ -125,7 +129,7 @@ img{
         margin-bottom: 32px;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 1200px) {
         margin-bottom: 40px;
     }
 }
