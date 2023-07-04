@@ -26,17 +26,15 @@
 .bookcard {
 }
 .bookcard-slider {
-  height: 52px;
+  height: 70px;
   background-color: var(--text-color-hover);
   visibility: hidden;
-  position: inherit;
+  position: absolute;
   justify-content: center;
   align-items: center;
-  bottom: 0;
-  left: 0;
-  display: none;
   width: 100%;
-  transform: translateY(0);
+  transform: translateY(100%);
+  overflow: hidden;
 }
 .bookcard:hover .bookcard-slider {
   display: flex;
@@ -52,4 +50,8 @@
   line-height: 18px;
   letter-spacing: -0.56px;
   text-transform: uppercase;
+}
+
+.wrapper {
+  position: relative;
 }
