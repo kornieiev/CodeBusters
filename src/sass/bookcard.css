@@ -56,3 +56,8 @@
 .wrapper {
   position: relative;
 }
+.bookcard-svg {
+  position: absolute;
+  left: 123px;
+  top: 205px;
+}
