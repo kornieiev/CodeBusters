@@ -1,13 +1,13 @@
-import { getBookcard } from "./bookcard";
+// import { getBookcard } from "./bookcard";
 import { seemore } from "./bookcard";
 
-const categories = document.querySelectorAll(".bestsellers-item-name")
-const titles = document.querySelectorAll(".bookcard-name")
-const authors = document.querySelectorAll(".bookcard-author")
-const images = document.querySelectorAll(".bookcard-image")
-const ids = document.querySelectorAll(".bookcard")
+// const categories = document.querySelectorAll(".bestsellers-item-name")
+// const titles = document.querySelectorAll(".bookcard-name")
+// const authors = document.querySelectorAll(".bookcard-author")
+// const images = document.querySelectorAll(".bookcard-image")
+// const ids = document.querySelectorAll(".bookcard")
 
-getBookcard(categories, titles, authors, images, ids)
+// getBookcard(categories, titles, authors, images, ids)
 
 
 

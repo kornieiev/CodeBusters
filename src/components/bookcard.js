@@ -1,6 +1,12 @@
 import { getBooksByCategory } from "../api";
 
-export function getBookcard(categories, titles, authors, images, ids) {
+const categories = document.querySelectorAll(".bestsellers-item-name")
+const titles = document.querySelectorAll(".bookcard-name")
+const authors = document.querySelectorAll(".bookcard-author")
+const images = document.querySelectorAll(".bookcard-image")
+const ids = document.querySelectorAll(".bookcard")
+
+// export function getBookcard(categories, titles, authors, images, ids) {
     
         let category = categories[0].textContent;
         getBooksByCategory(category)
@@ -83,7 +89,7 @@ export function getBookcard(categories, titles, authors, images, ids) {
             .catch(error => {
                 console.log(error);
             });
-}
+// }
 
 
 export function seemore(cat, imagess, titless, authorss, idss) {
