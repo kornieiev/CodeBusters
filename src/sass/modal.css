@@ -244,6 +244,7 @@
     text-align: center;
 
     margin-left: 47px;
+    visibility: hidden;
 }
 
 @media screen and (min-width: 768px) {
@@ -264,6 +265,9 @@
     }
 }
 
+.congrats-text-active {
+    visibility: visible;
+}
 
 @media screen and (min-width: 768px) {
     .tablet-modal-container  {
