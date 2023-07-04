@@ -10,6 +10,21 @@ const modalCloseBtn = document.querySelector('.modal-icon')
 const modalOverlay = document.querySelector('.modal-overlay')
 const quickView = document.querySelector('.quick-view')
 
+const addButton = document.querySelector('.modal-add-btn');
+const congratsText = document.querySelector('.congrats-text');
+
+const bookListModal = document.querySelector('.list')
+const bestListModal = document.querySelector('.bestsellers-list-second')
+const bestListMobile = document.querySelector('.bestsellers-mobile')
+const bestListItemModal = document.querySelector('.bestsellers-list-item')
+
+console.log(bestListModal)
+
+// const idFunction = getBookById(id)
+
+// bookcardForModal.addEventListener('click', openModal)
+
+
 let id;
 
 function getCardId (event) {
@@ -17,48 +32,24 @@ function getCardId (event) {
   if (closestDiv) {
     id = closestDiv.id;
   }
-  console.log(id)
+  console.log('id = ' + id)
+  console.log('e.target.classlist = '+ event.target.classList)
   return id;
 }
 
-window.addEventListener('click', getCardId);
 
 window.addEventListener('click', getCardId);
+window.addEventListener('click', openModal);
 
-
-// window.addEventListener('click', (e)=>{
-//     if (e.target.closest('.bookcard')) {
-//         console.log('1')
-//     }
-//     console.dir(e.target)
-// })
-
-// const windowTest = document
-
-const addButton = document.querySelector('.modal-add-btn');
-const congratsText = document.querySelector('.congrats-text');
-
-//-------------get id------------------
-// quickView.forEach(card => {
-//     card.addEventListener('click', () => {
-//         const bookId = card.dataset.id
-//         console.log(bookId)
-//     })
-// }
-// )
-//-------------------------------------
-
-
-bestSellersBtn.addEventListener('click', openModal)
 modalCloseBtn.addEventListener('click', closeModal)
-
-quickView.addEventListener('click', openModal)
-
-
 
 
 function openModal(e) { 
     e.preventDefault();
+    if (!e.target.classList.contains('bookcard-image') && !e.target.classList.contains('bookcard-slider') && !e.target.classList.contains('quick-view')) {
+      return
+    }
+
     document.addEventListener('keydown', handleKeyPress);
     modalContainer.classList.add("open-modal")
     modalOverlay.classList.add("open-modal")
