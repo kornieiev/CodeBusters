@@ -6,7 +6,7 @@ export function getBookcard(categories, titles, authors, images, ids) {
         getBooksByCategory(category)
             .then(response => {
                 const arr = response.data.map(info => info)
-                for (i = 0; i < 5; i++) {
+                for (let i = 0; i < 5; i++) {
                     
                 
                     const a = Math.floor(Math.random() * arr.length);
@@ -27,7 +27,7 @@ export function getBookcard(categories, titles, authors, images, ids) {
         getBooksByCategory(category)
             .then(response => {
                 const arr = response.data.map(info => info)
-                for (i = 5; i < 10; i++) {
+                for (let i = 5; i < 10; i++) {
                     
                 
                     const a = Math.floor(Math.random() * arr.length);
@@ -47,7 +47,7 @@ export function getBookcard(categories, titles, authors, images, ids) {
         getBooksByCategory(category)
             .then(response => {
                 const arr = response.data.map(info => info)
-                for (i = 10; i < 15; i++) {
+                for (let i = 10; i < 15; i++) {
                     
                 
                     const a = Math.floor(Math.random() * arr.length);
@@ -67,7 +67,7 @@ export function getBookcard(categories, titles, authors, images, ids) {
         getBooksByCategory(category)
             .then(response => {
                 const arr = response.data.map(info => info)
-                for (i = 15; i < 20; i++) {
+                for (let i = 15; i < 20; i++) {
                     
                 
                     const a = Math.floor(Math.random() * arr.length);
@@ -92,7 +92,7 @@ export function seemore(cat, imagess, titless, authorss, idss) {
               .then(response => {
                   const arr = response.data.map(info => info)
                   
-              for (i = 0; i < 15; i++) {
+              for (let i = 0; i < 15; i++) {
                   
 
                     imagess[i].src = arr[i].book_image
