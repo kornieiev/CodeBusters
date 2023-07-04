@@ -24,6 +24,7 @@
   margin: 0;
 }
 .bookcard {
+  object-fit: contain;
 }
 .bookcard-slider {
   height: 70px;

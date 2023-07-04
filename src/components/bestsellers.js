@@ -67,6 +67,11 @@ seemoreButton[3].addEventListener("click", () => {
 })
 
 active.addEventListener("click", () => {
-  bestsellersHome.classList.toggle("visually-hidden")
+  
+  if (!bestsellersHome.classList.contains("visually-hidden")) {
+    return;
+  } else {
+    bestsellersHome.classList.toggle("visually-hidden")
   categoryBlock.classList.toggle("visually-hidden");
+  }
 })

@@ -1,3 +1,6 @@
+.best-sellers {
+  padding-top: 40px;
+}
 .bestsellers-button {
   margin-top: 8px;
   display: inline-flex;
@@ -20,6 +23,7 @@
 }
 .bookcard-image {
   width: 335px;
+  height: 485px;
 }
 
 .bestsellers-list {
@@ -107,16 +111,19 @@
   }
   .bookcard-image {
     width: 218px;
+    height: 316px;
   }
 }
 @media screen and (max-width: 375px) {
   .bookcard-image {
     width: 280px;
+    height: 405px;
   }
 }
 @media screen and (min-width: 1200px) {
   .bookcard-image {
     width: 180px;
+    height: 256px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -165,4 +172,10 @@
 .choose-list-item {
   justify-content: center;
   display: flex;
+}
+.bestsellers-home {
+  margin-top: 40px;
+}
+.bestsellers-name {
+  margin-top: 40px;
 }
