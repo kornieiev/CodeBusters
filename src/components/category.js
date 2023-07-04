@@ -3,7 +3,9 @@ import { getBooksByCategory } from '../api/index';
 const categoriesListEl = document.querySelector('.categories-list');
 const categoryNameEl = document.querySelector('.bestsellers-name-first');
 
-categoriesListEl.addEventListener('click', onCategoryClick);
+if (categoriesListEl) {
+  categoriesListEl.addEventListener('click', onCategoryClick);
+}
 
 let selectedCategoryName = '';
 
@@ -43,7 +45,6 @@ async function onCategoryClick(e) {
       .catch(error => {
         console.log(error);
       });
-
   } else {
     return;
   }
