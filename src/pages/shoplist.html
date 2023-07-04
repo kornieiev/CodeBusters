@@ -4,16 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bookshelf - Shopping list</title>
+    <!-- Icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="24x24"
+      href="../images/pic/bookshelf/logo-min-24x24.png"
+    />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap"
     />
+    <!-- Styles -->
     <link rel="stylesheet" href="../sass/index.scss" />
-    <script type="module" src="../index.js"></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <!-- Header -->
     <include src="./pages/blocks/header.html"></include>
-    <div class="shopping-list-container">
+    <div class="shopping-list-container container">
       <section class="shopping-list-left">
         <include src="./pages/blocks/support.html"></include>
       </section>
@@ -47,7 +62,11 @@
                       Hardcover fiction
                     </h4>
                   </div>
-                  <button class="deletecard">Х</button>
+                  <button class="deletecard">
+                    <svg class="shopping-list-icon" width="16px" height="16px">
+                      <use href="../images/sprite.svg#icon-trash"></use>
+                    </svg>
+                  </button>
                 </div>
                 <p class="shopping-list-carddescription">
                   David Burroughs was once a devoted father to his
@@ -63,33 +82,33 @@
                     <li class="shopping-list-shopsitem">
                       <a href="" class="shopping-list-shopslink">
                         <svg
-                          class="shopping-list-shopsicon"
-                          width="32"
-                          height="11"
+                          class="shopping-list-shopsicon1"
+                          width="32px"
+                          height="11px"
                         >
-                          <use href="../images/sprite.svg#icon-burger"></use>
+                          <use href="../images/sprite.svg#icon-amazon"></use>
                         </svg>
                       </a>
                     </li>
                     <li class="shopping-list-shopsitem">
                       <a href="" class="shopping-list-shopslink">
                         <svg
-                          class="shopping-list-shopsicon"
-                          width="16"
-                          height="16"
+                          class="shopping-list-shopsicon2"
+                          width="16px"
+                          height="16px"
                         >
-                          <use href="../images/sprite.svg#icon-burger"></use>
+                          <use href="../images/sprite.svg#icon-bookshop1"></use>
                         </svg>
                       </a>
                     </li>
                     <li class="shopping-list-shopsitem">
                       <a href="" class="shopping-list-shopslink">
                         <svg
-                          class="shopping-list-shopsicon"
-                          width="16"
-                          height="16"
+                          class="shopping-list-shopsicon2"
+                          width="16px"
+                          height="16px"
                         >
-                          <use href="../images/sprite.svg#icon-burger"></use>
+                          <use href="../images/sprite.svg#icon-bookshop2"></use>
                         </svg>
                       </a>
                     </li>
@@ -101,5 +120,8 @@
         </div>
       </section>
     </div>
+    <!-- script -->
+    <script type="module" src="../common.js"></script>
+    <!-- <script type="module" src="../index.js"></script> -->
   </body>
 </html>

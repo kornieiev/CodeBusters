@@ -1,3 +1,6 @@
+.best-sellers {
+  padding-top: 40px;
+}
 .bestsellers-button {
   margin-top: 8px;
   display: inline-flex;
@@ -5,7 +8,7 @@
   align-items: flex-start;
   gap: 10px;
   border-radius: 40px;
-  border: 2px solid var(--violet);
+  border: 2px solid var(--text-color-hover);
   color: var(--black);
   font-size: 14px;
   font-family: DM Sans;
@@ -14,9 +17,13 @@
   line-height: 18px;
   letter-spacing: -0.14px;
   text-transform: uppercase;
+  position: sticky;
+  left: 1500px;
+  background-color: var(--bg-color-one);
 }
 .bookcard-image {
   width: 335px;
+  height: 485px;
 }
 
 .bestsellers-list {
@@ -28,7 +35,7 @@
 .bestsellers-item-name {
   margin: 40px 0 18px 0;
   height: 18px;
-  color: var(--main-text-color);
+  color: var(--text-color-three);
   font-size: 14px;
   font-family: DM Sans;
   font-style: normal;
@@ -48,10 +55,10 @@
   column-gap: 4px;
 }
 .bestsellers-name-first {
-  color: var(--black);
+  color: var(--text-color-two);
 }
 .bestsellers-name-second {
-  color: var(--violet);
+  color: var(--text-color-hover);
 }
 .bestsellers {
   display: flex;
@@ -66,18 +73,18 @@
   height: 54px;
   flex-shrink: 0;
   border-radius: 54px;
-  background: #4f2ee8;
+  background: var(--text-color-hover);
   position: sticky;
   bottom: 140px;
   left: 1000px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   .bestsellers-button-up {
     display: none;
     visibility: hidden;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .bestsellers-mobile {
     display: none;
     visibility: hidden;
@@ -88,10 +95,7 @@
   flex-direction: row;
   column-gap: 25px;
 }
-@media screen and (min-width: 768px) {
-  .bestsellers-mobile {
-  }
-}
+
 @media screen and (max-width: 1200px) {
   .bestsellers-tablet {
     display: none;
@@ -107,16 +111,30 @@
   }
   .bookcard-image {
     width: 218px;
+    height: 316px;
+  }
+  .bookcard-svg {
+    width: 60px;
+    height: 54px;
+    left: 79px;
+    top: 133px;
   }
 }
 @media screen and (max-width: 375px) {
   .bookcard-image {
     width: 280px;
+    height: 405px;
+  }
+  .bookcard-svg {
+    position: absolute;
+    left: 96px;
+    top: 162px;
   }
 }
 @media screen and (min-width: 1200px) {
   .bookcard-image {
     width: 180px;
+    height: 256px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -126,6 +144,57 @@
   .bestsellers-list {
     width: 1000px;
   }
+  .bookcard-svg {
+    width: 44px;
+    height: 40px;
+    left: 68px;
+    top: 110px;
+  }
+}
+.bestsellers-choose-list {
+  display: flex;
+
+  /* flex-wrap: wrap; */
+  row-gap: 40px;
+  justify-content: center;
+  align-items: center;
+  column-gap: 25px;
+}
+@media screen and (min-width: 768px) {
+  .bestsellers-choose-list {
+    width: 704px;
+    column-gap: 25px;
+    display: flex;
+
+    /* flex-wrap: wrap; */
+    row-gap: 25px;
+  }
+  .choose-list-item {
+    width: 218px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .choose-list-item {
+    width: 335px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .choose-list-item {
+    width: 180px;
+  }
+  .bestsellers-choose-list {
+    width: 1000px;
+  }
+}
+.choose-list-item {
+  justify-content: center;
+  display: flex;
+}
+.bestsellers-home {
+  margin-top: 40px;
+}
+.bestsellers-name {
+  margin-top: 40px;
 }
 
 

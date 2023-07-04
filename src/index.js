@@ -1,22 +1,16 @@
-import './components/support-ukraine/support-array';
-import './components/support-ukraine/support';
-import './components/categories';
-import './components/bookcard'
-import './components/bestsellers';
-////////////////////////////////////////// тест коду api
-// import { getCategories } from '../src/api';
-// import { getBooksAllCategories } from '../src/api';
+// import './components/loader'; // індекс + шопліст
+// import './components/support-ukraine/support-array'; // індекс + шопліст
+// import './components/support-ukraine/support'; // індекс + шопліст
+// import './components/categories_list'; // індекс
+// import './components/category'; // індекс
+// import './components/bookcard'; // індекс
+// import './components/bestsellers'; // індекс
+// import './components/modal'; // індекс
+// import './components/support-ukraine/support-swiper'; // індекс + шопліст
+// import './components/theme'; // індекс + шопліст
 
-// (async function () {
-//   const response = await getCategories();
-//   console.log(response);
-// })();
-
-// (async function () {
-//   const response = await getBooksAllCategories();
-//   console.log(response);
-// })();
-//////////////////////////////////////////////////////
-
-
-import './components/support-ukraine/support-swiper';
+import './components/categories_list'; // індекс
+import './components/category'; // індекс
+import './components/bookcard'; // індекс
+import './components/bestsellers'; // індекс
+import './components/modal'; // індекс

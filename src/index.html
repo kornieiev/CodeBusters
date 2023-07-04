@@ -4,35 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bookshelf - HOME</title>
+    <!-- Icon -->
     <link
       rel="icon"
       type="image/png"
       sizes="24x24"
       href="./images/pic/bookshelf/logo-min-24x24.png"
     />
+    <!-- Styles -->
     <link rel="stylesheet" href="./sass/index.scss" />
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-    <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <!-- temporary links-->
-    <!-- <ul>
-      <li><a href="./pages/category.html">CATEGORY PAGE</a></li>
-      <li><a href="./pages/shoplist.html">SHOPPING LIST PAGE</a></li>
-    </ul>
-    <hr /> -->
-    <!-- temporary links-->
+    <!--  -->
+    <include src="./pages/loader.html"></include>
+    <!-- Header -->
     <include src="./pages/blocks/header.html"></include>
-    <div class="combined">
-      <include src="./pages/blocks/all_categories.html"></include>
-      <include src="./pages/blocks/support.html"></include>
+    <!-- Main -->
+    <div class="main-combined">
+      <div class="combined">
+        <!-- All categories block -->
+        <include src="./pages/blocks/all_categories.html"></include>
+        <!-- Support block -->
+        <include src="./pages/blocks/support.html"></include>
+      </div>
+      <!-- Bestseller block -->
+      <include src="./pages/blocks/bestseller.html"></include>
+      <include src="./pages/blocks/modal.html"></include>
     </div>
-
-    <include src="./pages/blocks/bestseller.html"></include>
+    <!-- Footer -->
+    <include src="./pages/blocks/footer.html"></include>
+    <!-- script -->
+    <script type="module" src="./common.js"></script>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>

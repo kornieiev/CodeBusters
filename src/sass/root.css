@@ -1,18 +1,28 @@
 :root {
-    /* Body */
-    --body-background-color-light: #F6F6F6;
-    --body-background-color-dark: #202024;
-    /* Font colors */
-    --main-text-color: #B4AFAF;
-    --strong-text-color: #111111;
-    --accent-text-color: #4F2EE8;
-    --scroolbar-color: #E0E0E0;
-    /* Colors */
-    --white: #FFFFFF;
-    --violet: #4F2EE8;
-    --yellow: #EAC645;
-    --black: #111111;
-    /* Timing function */
-    --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* ОНОВЛЕНІ КОЛЬОРИ ДЛЯ ЗМІНИ ТЕМИ */
+
+  /* Header */
+  --bg-color-one: #fff;
+  --bg-color-two: #f6f6f6;
+  --elements-color: #111111;
+  --logo-color: #000000;
+  /* Common */
+  --text-color-one: rgba(17, 17, 17, 0.6);
+  --text-color-hover: #4f2ee8;
+  --text-color-two: #111111;
+  --text-color-three: #b4afaf;
+  --scroll-color: #e0e0e0;
 }
 
+:root[theme='color-theme'] {
+  /* Header */
+  --bg-color-one: #111111;
+  --bg-color-two: #202024;
+  --logo-color: #f3f3f3;
+  --elements-color: #ffffff;
+  /* Common */
+  --text-color-one: rgba(255, 255, 255, 0.6);
+  --text-color-hover: #eac645;
+  --text-color-two: #ffffff;
+  --scroll-color: rgba(17, 17, 17, 0.6);
+}

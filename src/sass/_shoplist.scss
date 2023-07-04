@@ -3,12 +3,18 @@
 }
 
 .shopping-list-left {
-  padding-top: 40px;
-  margin-left: 24px;
-}
-@media (max-width: $desktop) {
-  .shopping-list-left {
-    display: none;
+  @media (max-width: 1199px) {
+    // display: none;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
   }
 }
 
@@ -17,7 +23,9 @@
 }
 
 .shopping-list {
-  padding: 40px 0;
+  @media (min-width: $desktop) {
+    padding-left: 24px;
+  }
 }
 
 .shopping-empty-container {
@@ -31,7 +39,7 @@
 .shopping-list-tittle {
   margin-bottom: 120px;
   margin-top: 0;
-  padding-left: 20px;
+  // padding-left: 20px;
   color: var(--strong-text-color);
   font-size: 32px;
   font-family: 'DM Sans';
@@ -40,21 +48,20 @@
   line-height: 38px;
   letter-spacing: -1.28px;
 
-  @media (min-width: $mobile) and (max-width: $tablet) {
-    padding-left: 32px;
+  @media (min-width: $tablet) and (max-width: 1199px) {
+    // padding-left: 32px;
     margin-bottom: 140px;
     font-size: 48px;
     line-height: 52px;
     letter-spacing: -1.92px;
   }
 
-  @media (min-width: $tablet) {
-    padding-left: 15px;
+  @media (min-width: $desktop) {
+    // padding-left: 40px;
     margin-bottom: 140px;
     font-size: 48px;
     line-height: 52px;
     letter-spacing: -1.92px;
-    padding-left: 40px;
   }
 }
 
@@ -75,35 +82,18 @@
   line-height: 18px;
   letter-spacing: -0.28px;
 
-  @media (min-width: 366px) and (max-width: $tablet) {
+  @media (min-width: $tablet) {
     width: 349px;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: -0.36px;
   }
-
-  // @media (min-width: 769px) and (max-width: $desktop) {
-  //   width: 349px;
-  //   font-size: 18px;
-  //   line-height: 24px;
-  //   letter-spacing: -0.36px;
-  // }
 }
 
-@media (max-width: $mobile) {
-  .shopping-empty-image {
-    width: 275px;
-  }
-}
+.shopping-empty-image {
+  width: 275px;
 
-@media (min-width: $mobile) and (max-width: $tablet) {
-  .shopping-empty-image {
-    width: 322px;
-  }
-}
-
-@media (min-width: 769px) and (max-width: $desktop) {
-  .shopping-empty-image {
+  @media (min-width: $tablet) {
     width: 322px;
   }
 }
@@ -115,10 +105,10 @@
   align-items: center;
 }
 .shopping-list-cardlist {
-  @media (min-width: $mobile) and (max-width: $tablet) {
+  @media (min-width: $tablet) and (max-width: 1199px) {
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $desktop) {
   }
 }
 
@@ -130,27 +120,24 @@
   align-items: center;
   border-radius: 16px;
   border: 2px solid rgba(79, 46, 232, 0.4);
-  background: var(--body-background-color-light);
+  background: var(--white);
 
-  @media (min-width: $mobile) and (max-width: $tablet) {
-    height: 213px;
+  @media (min-width: $tablet) and (max-width: 1199px) {
     width: 704px;
+    height: 213px;
+    padding: 30px 24px;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $desktop) {
     height: 213px;
     width: 996px;
+    padding: 30px 24px;
   }
 }
 
 .shopping-list-cardlogo {
   width: 100px;
   height: 142px;
-
-  @media (min-width: $mobile) and (max-width: $tablet) {
-    width: 116px;
-    height: 165px;
-  }
 
   @media (min-width: $tablet) {
     width: 116px;
@@ -160,12 +147,37 @@
 
 .shopping-list-fullinfo {
   margin-left: 14px;
+
+  @media (min-width: $tablet) {
+    margin-left: 24px;
+  }
 }
 
 .shopping-list-cardheaer {
   display: flex;
   justify-content: space-between;
   margin-bottom: 8px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 14px;
+  }
+}
+
+.deletecard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 28px;
+  background: var(--violet);
+
+  @media (min-width: $tablet) {
+    width: 34px;
+    height: 34px;
+    border-radius: 34px;
+  }
 }
 
 .shopping-list-cardtitle {
@@ -191,12 +203,19 @@
   letter-spacing: 0.36px;
 }
 
+.shopping-list-icon {
+  @media (min-width: $tablet) {
+    width: 18px;
+    height: 18px;
+  }
+}
+
 .shopping-list-carddescription {
-  max-width: 193px;
-  max-height: 68px;
+  width: 193px;
+  height: 68px;
   overflow: hidden;
   overflow-y: scroll;
-  margin: 0px 0px 14px 0px;
+  margin: 0px 0px 16px 0px;
   overflow: hidden;
   color: var(--strong-text-color);
   text-overflow: ellipsis;
@@ -207,11 +226,23 @@
   font-weight: 400;
   line-height: 18px;
   letter-spacing: -0.56px;
+
+  @media (min-width: $tablet) and (max-width: 1199px) {
+    width: 508px;
+    height: 53px;
+    margin: 0px 0px 48px 0px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 808px;
+    height: 53px;
+    margin: 0px 0px 48px 0px;
+  }
 }
 
 .shopping-list-cardfooter {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -228,4 +259,34 @@
 
 .shopping-list-shops {
   display: flex;
+  align-items: flex-end;
+  gap: 8px;
+
+  @media (min-width: $tablet) {
+    gap: 16px;
+  }
+}
+
+.shopping-list-shopsicon1 {
+  color: black;
+  @media (min-width: $tablet) {
+    width: 48px;
+    height: 15px;
+  }
+}
+
+.shopping-list-shopsicon2 {
+  color: black;
+  @media (min-width: $tablet) {
+    // width: 28px;
+    // height: 28px;
+  }
+}
+
+.support {
+  margin-top: 0px;
+}
+
+.container {
+  // margin-left: 0px;
 }
