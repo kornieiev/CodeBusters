@@ -1,5 +1,5 @@
 import { getBookcard } from "./bookcard";
-import { getBooksByCategory } from "../api";
+import { seemore } from "./bookcard";
 
 const categories = document.querySelectorAll(".bestsellers-item-name")
 const titles = document.querySelectorAll(".bookcard-name")
@@ -24,25 +24,39 @@ upButton.addEventListener("click", () => {
 const titless = document.querySelectorAll(".bookcard-names")
 const authorss = document.querySelectorAll(".bookcard-authors")
 const imagess = document.querySelectorAll(".bookcard-images")
-const idss = document.querySelectorAll(".bookcard2")
-const active = document.querySelector(".active")
+const idss = document.querySelectorAll(".bookcard-second")
+const seemoreButton = document.querySelectorAll(".bestsellers-button")
+const categoryBlock = document.querySelector(".category-block")
+const bestsellersHome = document.querySelector(".bestsellers-home")
+const active = document.querySelector(".categories-list-link")
+categoryBlock.classList.toggle("visually-hidden");
 
-console.log(active.textContent)
-let category = "Hardcover Fiction";
-        getBooksByCategory(category)
-            .then(response => {
-              const arr = response.data.map(info => info)
-              for (i = 0; i < 15; i++) {
-                  
+seemoreButton[0].addEventListener("click", () => {
+  bestsellersHome.classList.toggle("visually-hidden")
+  categoryBlock.classList.toggle("visually-hidden");
+  const cat = "Combined Print and E-Book Fiction"
+  seemore(cat, imagess, titless, authorss, idss)
+})
+seemoreButton[1].addEventListener("click", () => {
+  bestsellersHome.classList.toggle("visually-hidden")
+  categoryBlock.classList.toggle("visually-hidden");
+  const cat = "Graphic Books and Manga"
+  seemore(cat, imagess, titless, authorss, idss)
+})
+seemoreButton[2].addEventListener("click", () => {
+  bestsellersHome.classList.toggle("visually-hidden")
+  categoryBlock.classList.toggle("visually-hidden");
+  const cat = "Hardcover Fiction"
+  seemore(cat, imagess, titless, authorss, idss)
+})
+seemoreButton[3].addEventListener("click", () => {
+  bestsellersHome.classList.toggle("visually-hidden")
+  categoryBlock.classList.toggle("visually-hidden");
+  const cat = "Hardcover Nonfiction"
+  seemore(cat, imagess, titless, authorss, idss)
+})
 
-                    imagess[i].src = arr[i].book_image
-                    titless[i].textContent = arr[i].title
-                    authorss[i].textContent = arr[i].author
-                    ids[i].id = arr[i]._id
-
-                }
-
-            })
-            .catch(error => {
-                console.log(error);
-            });
+active.addEventListener("click", () => {
+  bestsellersHome.classList.toggle("visually-hidden")
+  categoryBlock.classList.toggle("visually-hidden");
+})
