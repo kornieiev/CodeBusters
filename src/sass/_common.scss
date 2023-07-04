@@ -11,7 +11,7 @@
 }
 
 body {
-  background-color: var(--bg-color-one);
+  background-color: red;
 }
 
 *::-webkit-scrollbar {
@@ -39,7 +39,7 @@ $desktop: 1200px;
 
 .main-combined {
   display: flex;
-  
+
   @media screen and (max-width: 767px) {
     max-width: $mobile;
     flex-direction: column;
