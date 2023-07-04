@@ -16,8 +16,8 @@
 
 :root[theme='color-theme'] {
   /* Header */
-  --bg-color-one: #202040;
-  --bg-color-two: #111111;
+  --bg-color-one: #111111;
+  --bg-color-two: #202024;
   --logo-color: #f3f3f3;
   --elements-color: #ffffff;
   /* Common */
