@@ -43,16 +43,10 @@ window.addEventListener('click', openModal);
 
 modalCloseBtn.addEventListener('click', closeModal)
 
-// quickView.addEventListener('click', openModal)
-// for (var i=0; i<quickView.length; i++) {
-//   quickView[i].addEventListener('click', openModal)
-// }
-// window.addEventListener('click', openModal)
-
 
 function openModal(e) { 
     e.preventDefault();
-    if (!e.target.classList.contains('bookcard-image')) {
+    if (!e.target.classList.contains('bookcard-image') && !e.target.classList.contains('bookcard-slider') && !e.target.classList.contains('quick-view')) {
       return
     }
 
