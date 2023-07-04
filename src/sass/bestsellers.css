@@ -162,3 +162,7 @@
     width: 1000px;
   }
 }
+.choose-list-item {
+  justify-content: center;
+  display: flex;
+}

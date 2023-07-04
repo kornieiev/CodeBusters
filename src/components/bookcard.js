@@ -84,3 +84,27 @@ export function getBookcard(categories, titles, authors, images, ids) {
                 console.log(error);
             });
 }
+
+
+export function seemore(cat, imagess, titless, authorss, idss) {
+    let category = cat;
+          getBooksByCategory(category)
+              .then(response => {
+                  const arr = response.data.map(info => info)
+                  
+              for (i = 0; i < 15; i++) {
+                  
+
+                    imagess[i].src = arr[i].book_image
+                    titless[i].textContent = arr[i].title
+                    authorss[i].textContent = arr[i].author
+                    idss[i].id = arr[i]._id
+
+                }
+
+            })
+            .catch(error => {
+                console.log(error);
+            });
+
+}
