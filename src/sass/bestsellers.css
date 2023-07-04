@@ -130,7 +130,7 @@
 .bestsellers-choose-list {
   display: flex;
 
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   row-gap: 40px;
   justify-content: center;
   align-items: center;
@@ -142,7 +142,7 @@
     column-gap: 25px;
     display: flex;
 
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     row-gap: 25px;
   }
   .choose-list-item {
