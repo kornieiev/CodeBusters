@@ -25,6 +25,11 @@
     width: 24px;
     height: 24px;
 }
+
+.logo-text {
+  background-color: var(--bg-color-one);
+  fill: var(--logo-color);
+}
   
 .navigation-menu {
     display: none;
@@ -98,11 +103,11 @@
 }
   
 .burger-menu-icon {
-    stroke: black;
+    stroke: var(--logo-color);
 }
   
 .close-menu-icon {
-    stroke: #000;
+    stroke: var(--logo-color);
 }
   
 .page-button {
@@ -115,11 +120,12 @@
     border: none;
     border-radius: 36px;
     font-size: 14px;
-    color: #111;
+    color: var(--elements-color);
     font-weight: 700;
     line-height: 1.29;
     letter-spacing: -0.56px;
     text-decoration: none;
+    fill: var(--logo-color);
 }
   
 .page-button.cart{
