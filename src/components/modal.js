@@ -2,6 +2,12 @@ import { getBookById } from "../api"
 import { renderBookCard } from './render-modal-book'
 import axios from 'axios';
 
+
+const modalBookName = document.querySelector('.modal-book-name')
+const modalAuthor = document.querySelector('.modal-author')
+const modalDescription = document.querySelector('.modal-description')
+const modalImage = document.querySelector('.modal-image')
+
 const bodyToScroll = document.querySelector('body')
 const windowToScroll = document.querySelector('window')
 
@@ -114,13 +120,40 @@ function openModal(e) {
   const bookId = getCardId (e)
   console.log('bookId in openModal '+bookId)
 
-  const book = getBookById(bookId)
-  console.log(book)
+let author, description, title, image, amazonUrl, appleBooksUrl, booksAMillionUrl;
 
-  // const resultBook = renderBookCard(book)
-  // console.log(resultBook)
+getBookById(bookId)
+  .then((result) => {
+    const yourObject = result;
+    author = yourObject.data.author;
+    description = yourObject.data.description;
+    title = yourObject.data.title;
+    image = yourObject.data.book_image;
+    amazonUrl = yourObject.data.buy_links[0].url
+    appleBooksUrl = yourObject.data.buy_links[1].url
+    booksAMillionUrl = yourObject.data.buy_links[3].url
 
-  console.log(book.author)
+    myFunction(author, description, title, image, amazonUrl, appleBooksUrl, booksAMillionUrl);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+function myFunction(author, description, title, image, amazonUrl, appleBooksUrl, booksAMillionUrl) {
+  console.log('Author:', author);
+  console.log('Description:', description);
+  console.log('Title:', title);
+  console.log('Image:', image);
+  console.log('Amazon URL:', amazonUrl);
+  console.log('Apple Books URL:', appleBooksUrl);
+  console.log('Books-A-Million URL:', booksAMillionUrl);
+
+  modalBookName.textContent = title;
+  modalAuthor.textContent = author;
+  modalDescription.textContent = description;
+  modalImage.src = image;
+  modalImage.alt = image;
+}
 
   addButton.addEventListener('click', function() {
       if (addButton.textContent === 'ADD TO SHOPPING LIST') {
@@ -132,5 +165,3 @@ function openModal(e) {
       }
     });
 }
-
-
