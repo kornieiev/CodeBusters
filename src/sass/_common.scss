@@ -70,12 +70,14 @@ $desktop: 1200px;
     padding-left: 32px;
     padding-right: 32px;
   }
-  
+
   @media screen and (min-width: $desktop) {
     max-width: $desktop;
     display: flex;
     flex-direction: column;
     padding: 0 24px;
+    gap: 86px;
+    
   }
 }
 
@@ -101,7 +103,7 @@ $desktop: 1200px;
   }
 }
 
-section {
+.section {
   padding-bottom: 40px;
 }
 
