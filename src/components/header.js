@@ -90,6 +90,7 @@ function openSecondModal (event) {
     }
     modalUp.classList.add('is-hidden');
     modalIn.classList.remove('is-hidden');
+    document.body.classList.add('no-scroll');
 }
 
 function openFirstModal (event) {
@@ -98,6 +99,7 @@ function openFirstModal (event) {
     }
     modalUp.classList.remove('is-hidden');
     modalIn.classList.add('is-hidden');
+    document.body.classList.add('no-scroll');
     
 }
 
@@ -106,6 +108,7 @@ function closeModal () {
     modalIn.classList.add('is-hidden');
     signUpForm.reset();
     signInForm.reset();
+    document.body.classList.remove('no-scroll');
 }
 
 function toggleDropMenu () {
@@ -248,7 +251,7 @@ function saveClassChanges() {
     const elements = document.querySelectorAll('.save');
     const classList = Array.from(elements).map((element) => element.classList.value);
     sessionStorage.setItem('classChanges', JSON.stringify(classList));
-  }
+}
   
 function restoreClassChanges() {
     
@@ -277,7 +280,6 @@ function doingLogOut (event) {
         authHeaderBtn.classList.add('visually-hidden');
     } else {
         makeLogOut();
-
     }
 }
 
