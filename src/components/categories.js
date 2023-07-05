@@ -73,7 +73,7 @@ const authorsEl = document.querySelectorAll(".bookcard-author")
 const imagesEl = document.querySelectorAll(".bookcard-image")
 
 const displayBooksByCategory = (category) => {
-  console.log(category);
+  console.log('hello');
 console.log(categoriesEl)
   const booksContainer = document.querySelector('.best-sellers');
   booksContainer.innerHTML = '';
