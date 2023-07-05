@@ -1,9 +1,15 @@
 import { getBookById } from '../api';
-import { deleteFromStorage } from './localStorageApi';
+import { deleteFromStorage, getStoredItems } from './localStorageApi';
+import PaginationSystem from './paginationSystem';
+import { paginationImitator } from './paginationSystem';
 // Отримання даних з localStorage
 let shoppingList = [];
+let page = 2;
 function init() {
-  shoppingList = JSON.parse(localStorage.getItem('shoppingList')) || [];
+  const windowHeight = window.innerWidth;
+  const perPage = windowHeight >= 768 ? 3 : 4;
+
+  shoppingList = getStoredItems() || [];
   const placeHolder = document.querySelector('.shopping-empty-container');
 
   if (shoppingList.length !== 0) {
@@ -28,7 +34,7 @@ function createShoppingCard(book) {
         <div class="shopping-list-cardheader">
           <div class="cardheader-titlecontainer">
             <h3 class="shopping-list-cardtitle">${book.title}</h3>
-            <h4 class="shopping-list-cardcategory">${book.category}</h4>
+            <h4 class="shopping-list-cardcategory">${book.list_name}</h4>
           </div>
           <button class="deletecard">Х</button>
         </div>
@@ -96,7 +102,7 @@ function updateLocalStorage() {
 
 // Приклад додавання книги до списку
 
-updateLocalStorage();
+// updateLocalStorage();
 displayShoppingCards();
 
 function deleteCard(event) {
