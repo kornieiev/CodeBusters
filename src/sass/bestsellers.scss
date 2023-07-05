@@ -160,8 +160,8 @@ img {
   height: 54px;
   flex-shrink: 0;
   border-radius: 54px;
-  background: var(--text-color-hover);
-  opacity: 0.5;
+  background: #4f2ee8;
+  // opacity: 0.5;
   position: sticky;
   bottom: 140px;
   left: 1000px;
@@ -169,8 +169,20 @@ img {
     display: none;
     visibility: hidden;
   }
-  @media screen and (max-width: 767px) {
-    display: none;
-    visibility: hidden;
-  }
+}
+
+.bestsellers-button-up {
+  width: 54px;
+  height: 54px;
+  background-image: url(/src/images/up-btn.svg);
+  background-position: center;
+  background-size: 24px;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+  border-radius: 54px;
+  opacity: 0.7;
+  position: sticky;
+  bottom: 140px;
+  left: 1000px;
+  border: 8px solid rgba(79, 46, 232, 0.3);
 }
