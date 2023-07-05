@@ -22,24 +22,46 @@
     />
   </head>
   <body>
-    <!--  -->
-    <include src="./pages/loader.html"></include>
     <!-- Header -->
     <include src="./pages/blocks/header.html"></include>
-    <!-- Main -->
-    <div class="main-combined">
-      <div class="combined">
+    <!-- Main section -->
+    <section class="section">
+      <div class="main-container">
         <!-- All categories block -->
         <include src="./pages/blocks/all_categories.html"></include>
         <!-- Support block -->
         <include src="./pages/blocks/support.html"></include>
       </div>
-      <!-- Bestseller block -->
-      <include src="./pages/blocks/bestseller.html"></include>
-      <include src="./pages/blocks/modal.html"></include>
-    </div>
+      <div class="book-container">
+        <!-- Bestseller block -->
+        <div>
+          <include src="./pages/blocks/bestseller.html"></include>
+          <include src="./pages/blocks/modal.html"></include>
+        </div>
+      </div>
+    </section>
+
+    <!--  -->
+    <!-- Main -->
+    <!-- <h1 class="visually-hidden">Bookshelf - Best Sellers Books</h1> -->
+    <!-- <div class="main-combined"> -->
+    <!-- <div class="combined"> -->
+    <!-- All categories block -->
+    <!-- <include src="./pages/blocks/all_categories.html"></include> -->
+    <!-- Support block -->
+    <!-- <include src="./pages/blocks/support.html"></include> -->
+    <!-- </div> -->
+    <!-- Bestseller block -->
+    <!-- <include src="./pages/blocks/bestseller.html"></include> -->
+    <!-- <include src="./pages/blocks/modal.html"></include> -->
+    <!-- </div> -->
+    <!--  -->
+    <!--  -->
+
     <!-- Footer -->
     <include src="./pages/blocks/footer.html"></include>
+    <!--  -->
+    <include src="./pages/loader.html"></include>
     <!-- script -->
     <script type="module" src="./common.js"></script>
     <script type="module" src="./index.js"></script>
