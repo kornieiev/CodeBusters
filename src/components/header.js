@@ -57,6 +57,7 @@ function setToLocalStorage (userInfo) {
 
 function collectFormData(event) {
     event.preventDefault();
+    document.body.classList.remove('no-scroll');
     setSubmitStatus();
 
     const inputs = signUpForm.querySelectorAll('.modal-input');
@@ -69,8 +70,10 @@ function collectFormData(event) {
     authHeaderBtn.classList.add('visually-hidden');
     autSubmitHeaderBtn.classList.remove('visually-hidden');
     
+
     closeModal();
     toggleDropMenu();
+    
     if (window.innerWidth > 768) {
         closeEl.classList.add('visually-hidden');
         navMenuEl.classList.remove('visually-hidden');
@@ -81,7 +84,7 @@ function collectFormData(event) {
 
 function toggleModalWindow () {
     modalUp.classList.remove('is-hidden');
-    document.body.classList.toggle('no-scroll');
+    document.body.classList.add('no-scroll');
 }
 
 function openSecondModal (event) {
@@ -115,7 +118,13 @@ function toggleDropMenu () {
     dropMenuEl.classList.toggle('visually-hidden');
     burgerEl.classList.toggle('visually-hidden');
     closeEl.classList.toggle('visually-hidden');
-    document.body.classList.toggle('no-scroll');
+    if (dropMenuEl.classList.contains('visually-hidden')) {
+        document.body.classList.add('no-scroll');
+    } else {
+        document.body.classList.remove('no-scroll');
+    };
+
+    
 }
 
 function setSubmitStatus () {
