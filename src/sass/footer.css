@@ -24,7 +24,7 @@
 }
 .footer-text {
   color: #b4afaf;
-  font-size: 14px;
+  font-size: 10px;
   font-family: DM Sans;
 
   line-height: 0.96;
@@ -34,7 +34,7 @@
 }
 @media screen and (min-width: 768px) {
   .footer-text {
-    font-size: 20px;
+    font-size: 16px;
   }
   .heart-icon {
     width: 25px;
@@ -47,14 +47,15 @@
 
 @media screen and (min-width: 1440px) {
   .footer-text {
-    font-size: 25px;
+    font-size: 18px;
   }
   .heart-icon {
-    width: 30px;
-    height: 30px;
+    width: 22px;
+    height: 22px;
   }
   .footer {
-    padding: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 }
 
