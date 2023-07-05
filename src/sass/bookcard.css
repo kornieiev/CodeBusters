@@ -24,19 +24,32 @@
   margin: 0;
 }
 .bookcard {
-  object-fit: contain;
+  object-fit: cover;
 }
 .bookcard-slider {
   height: 70px;
-  background-color: var(--text-color-hover);
+  background-color: #eac645;
   visibility: hidden;
   position: absolute;
   justify-content: center;
   align-items: center;
-  width: 100%;
   transform: translateY(100%);
   overflow: hidden;
+  border-radius: 0px 0px 8px 8px;
+  width: 335px;
 }
+
+@media screen and (min-width: 768px) {
+  .bookcard-slider {
+    width: 216px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .bookcard-slider {
+    width: 180px;
+  }
+}
+
 .bookcard:hover .bookcard-slider {
   display: flex;
   visibility: visible;
