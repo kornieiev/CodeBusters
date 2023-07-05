@@ -12,7 +12,7 @@
     grid-template-columns: auto;
     gap: 40px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1440px) {
     display: grid;
     grid-template-columns: 356px 1fr;
     gap: 40px;
@@ -37,7 +37,7 @@ img {
     width: 218px;
     height: 316px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1440px) {
     width: 180px;
     height: 256px;
   }
@@ -47,20 +47,36 @@ img {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 24px;
+  align-items: start;
+  .bestsellers-mobile {
+    display: none;
+  }
   @media screen and (max-width: 375px) {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 40px;
+    .bestsellers-mobile {
+      display: none;
+    }
   }
   @media screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    .bestsellers-mobile {
+      display: inline;
+    }
+    .bestsellers-tablet {
+      display: none;
+    }
   }
   @media screen and (min-width: 1440px) {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 24px;
+    .bestsellers-tablet {
+      display: inline;
+    }
   }
 }
 
@@ -74,7 +90,7 @@ img {
     left: 96px;
     top: 162px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1440px) {
     width: 44px;
     height: 40px;
     left: 68px;
