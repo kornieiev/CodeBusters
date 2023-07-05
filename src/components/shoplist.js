@@ -26,7 +26,7 @@ function createShoppingCard(book) {
   const cardListContainer = document.querySelector('.shopping-list-cardlist');
   const listItem = document.createElement('li');
   listItem.classList.add('shopping-list-card');
-  const cardHTML = `
+  const cardHTMLOld = `
       <img class="shopping-list-cardlogo" src="${
         book.book_image
       }" alt="book-logo" />
@@ -46,6 +46,70 @@ function createShoppingCard(book) {
           </ul>
         </div>
       </div>
+  `;
+
+  const cardHTML = `
+  <img
+                class="shopping-list-cardlogo"
+                src="${book.book_image}"
+                alt="book-logo"
+              />
+              <div class="shopping-list-fullinfo">
+                <div class="shopping-list-cardheaer">
+                  <div class="cardheaer-tittlecontainer">
+                    <h3 class="shopping-list-cardtitle">${book.title}</h3>
+                    <h4 class="shopping-list-cardcategory">
+                      ${book.list_name}
+                    </h4>
+                  </div>
+                  <button class="deletecard">
+                    <svg class="shopping-list-icon" width="16px" height="16px">
+                      <use href="../images/sprite.svg#icon-trash"></use>
+                    </svg>
+                  </button>
+                </div>
+                <p class="shopping-list-carddescription">
+                  ${book.description}
+                </p>
+                <div class="shopping-list-cardfooter">
+                  <h4 class="shopping-list-cardauthor">${book.author}</h4>
+                  <ul class="shopping-list-shops">
+                    <li class="shopping-list-shopsitem">
+                      <a href="${book.amazon_product_url}" class="shopping-list-shopslink">
+                        <svg
+                          class="shopping-list-shopsicon1"
+                          width="32px"
+                          height="11px"
+                        >
+                          <use href="./sprite.svg#icon-amazon"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="shopping-list-shopsitem">
+                      <a href="" class="shopping-list-shopslink">
+                        <svg
+                          class="shopping-list-shopsicon2"
+                          width="16px"
+                          height="16px"
+                        >
+                          <use href="../images/sprite.svg#icon-bookshop1"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="shopping-list-shopsitem">
+                      <a href="" class="shopping-list-shopslink">
+                        <svg
+                          class="shopping-list-shopsicon2"
+                          width="16px"
+                          height="16px"
+                        >
+                          <use href="../images/sprite.svg#icon-bookshop2"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
   `;
 
   listItem.innerHTML += cardHTML;
