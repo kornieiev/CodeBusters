@@ -51,8 +51,10 @@ function getCardId(event) {
   return id;
 }
 
+const bestsellersListEl = document.querySelector('.bestsellers-list');
+
 window.addEventListener('click', getCardId);
-window.addEventListener('click', openModal);
+bestsellersListEl.addEventListener('click', openModal);
 
 modalCloseBtn.addEventListener('click', closeModal);
 
