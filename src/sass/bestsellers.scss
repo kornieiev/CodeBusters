@@ -28,7 +28,7 @@ img {
 .bookcard-image {
   width: 335px;
   height: 486px;
-  object-fit: contain;
+  object-fit: cover;
   @media screen and (max-width: 375px) {
     width: 335px;
     height: 486px;
