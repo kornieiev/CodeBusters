@@ -160,22 +160,21 @@ h6 {
 .main-container {
   display: flex;
   flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
+  // margin-left: auto;
+  // margin-right: auto;
 
   @media screen and (max-width: 767px) {
-    max-width: $mobile;
+    // max-width: $mobile;
   }
 
   @media screen and (min-width: $tablet) {
-    max-width: $tablet;
+    // max-width: $tablet;
     display: flex;
     flex-direction: row;
-    justify-content: center;
   }
 
   @media screen and (min-width: $desktop) {
-    max-width: $desktop;
+    // max-width: $desktop;
     display: flex;
     flex-direction: column;
   }
@@ -186,21 +185,21 @@ h6 {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
+  // margin-left: auto;
+  // margin-right: auto;
 
-  @media screen and (max-width: 767px) {
-    max-width: $mobile;
-  }
+  // @media screen and (max-width: 767px) {
+  //   max-width: $mobile;
+  // }
 
   @media screen and (min-width: $tablet) {
-    max-width: $tablet;
+    // max-width: $tablet;
     display: flex;
     flex-direction: column;
   }
 
   @media screen and (min-width: $desktop) {
-    max-width: $desktop;
+    // max-width: $desktop;
     flex-direction: row;
   }
 }

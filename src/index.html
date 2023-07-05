@@ -21,22 +21,27 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <!-- Header -->
     <include src="./pages/blocks/header.html"></include>
     <!-- Main section -->
     <section class="section">
-      <div class="main-container">
-        <!-- All categories block -->
-        <include src="./pages/blocks/all_categories.html"></include>
-        <!-- Support block -->
-        <include src="./pages/blocks/support.html"></include>
-      </div>
-      <div class="book-container">
-        <!-- Bestseller block -->
-        <div>
-          <include src="./pages/blocks/bestseller.html"></include>
-          <include src="./pages/blocks/modal.html"></include>
+      <div class="container">
+        <div class="row">
+          <div class="main-container">
+            <!-- All categories block -->
+            <include src="./pages/blocks/all_categories.html"></include>
+            <!-- Support block -->
+            <include src="./pages/blocks/support.html"></include>
+          </div>
+          <div class="book-container">
+            <!-- Bestseller block -->
+            <div>
+              <include src="./pages/blocks/bestseller.html"></include>
+              <include src="./pages/blocks/modal.html"></include>
+            </div>
+          </div>
         </div>
       </div>
     </section>
