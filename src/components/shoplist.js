@@ -2,6 +2,7 @@ import { getBookById } from '../api';
 import { deleteFromStorage, getStoredItems } from './localStorageApi';
 import PaginationSystem from './paginationSystem';
 import { paginationImitator } from './paginationSystem';
+
 // Отримання даних з localStorage
 let shoppingList = [];
 let page = 2;
@@ -170,11 +171,13 @@ function updateLocalStorage() {
 displayShoppingCards();
 
 function deleteCard(event) {
-  if (!event.target.classList.contains('deletecard')) {
-    return;
+  if (
+    event.target.classList.contains('deletecard') ||
+    event.target.classList.contains('shopping-list-icon')
+  ) {
+    deleteFromStorage(this.id);
+    this.card.remove();
   }
-  deleteFromStorage(this.id);
-  this.card.remove();
 
   init();
 }

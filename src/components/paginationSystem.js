@@ -47,8 +47,9 @@ class PaginationSystem {
         this.renderOnMobile(buttonArr);
       }
 
-      //   buttonArr.find(item => Number.parseInt(item.textContent) === this.page)
-      //     .classList.add('pagination-button__checked');
+      buttonArr
+        .find(item => Number.parseInt(item.textContent) === this.page)
+        .classList.add('pagination-button__checked');
     }
   }
   hideSystem() {
