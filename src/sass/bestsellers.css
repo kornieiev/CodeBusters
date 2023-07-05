@@ -164,6 +164,7 @@
   justify-content: center;
   align-items: center;
   column-gap: 25px;
+  justify-content: flex-start;
 }
 @media screen and (min-width: 768px) {
   .bestsellers-choose-list {
@@ -203,3 +204,8 @@
 /* .bestsellers-name {
   margin-top: 40px;
 } */
+
+.style-js {
+  /* margin-left: 40px; */
+  margin-bottom: 40px;
+}
