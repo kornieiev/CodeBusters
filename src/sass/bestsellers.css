@@ -31,6 +31,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 40px;
 }
 .bestsellers-item-name {
   margin: 40px 0 18px 0;
@@ -56,9 +57,12 @@
 }
 .bestsellers-name-first {
   color: var(--text-color-two);
+  margin-top: 40px;
+  margin-left: 40px;
 }
 .bestsellers-name-second {
   color: var(--text-color-hover);
+  margin-top: 40px;
 }
 .bestsellers {
   display: flex;
@@ -191,9 +195,11 @@
   justify-content: center;
   display: flex;
 }
-.bestsellers-home {
+/* Dima */
+/* .bestsellers-home {
   margin-top: 40px;
-}
-.bestsellers-name {
+} */
+/* Dima */
+/* .bestsellers-name {
   margin-top: 40px;
-}
+} */

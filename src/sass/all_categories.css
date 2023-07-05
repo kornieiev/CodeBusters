@@ -1,5 +1,6 @@
+/* Dima */
 .categories_list_section {
-  padding-top: 40px;
+  margin-top: 40px;
 }
 
 .categories-list {
@@ -8,11 +9,11 @@
   gap: 24px;
   max-width: 335px;
   height: 228px;
-  
+
   text-align: left;
   overflow-y: auto;
   margin: 0px;
-  }
+}
 
 .categories-list a {
   text-decoration: none;
@@ -20,7 +21,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .categories_list_section .container{
+  .categories_list_section .container {
     padding: 0;
   }
   .categories-list {
@@ -28,7 +29,7 @@
     height: 472px;
   }
 }
-  
+
 @media screen and (min-width: 1440px) {
   .categories_list_section.section {
     padding-bottom: 0;
@@ -38,7 +39,7 @@
     width: 356px;
   }
 }
-  
+
 .categories-item {
   font-size: 16px;
   font-weight: 400;
@@ -46,9 +47,9 @@
   letter-spacing: -0.02em;
   color: var(--text-color-one);
 }
-  
+
 .categories-item.active {
   font-weight: 700;
-  color: var(--text-color-hover); 
+  color: var(--text-color-hover);
   text-transform: uppercase;
 }
