@@ -21,7 +21,8 @@ upButton.addEventListener("click", () => {
   });
  
 })
-const titless = document.querySelectorAll(".bookcard-names")
+export const initShowMoreButton = () => {
+  const titless = document.querySelectorAll(".bookcard-names")
 const authorss = document.querySelectorAll(".bookcard-authors")
 const imagess = document.querySelectorAll(".bookcard-images")
 const idss = document.querySelectorAll(".bookcard-second")
@@ -33,45 +34,51 @@ const bestsellersFirst = document.querySelector(".category-name-first")
 const bestsellersSecond = document.querySelector(".category-name-second")
 categoryBlock.classList.toggle("visually-hidden");
 
-seemoreButton[0].addEventListener("click", () => {
-  bestsellersHome.classList.toggle("visually-hidden")
-  categoryBlock.classList.toggle("visually-hidden");
-  bestsellersFirst.textContent = "Combined Print and E-Book"
-  bestsellersSecond.textContent = "Fiction"
-  const cat = "Combined Print and E-Book Fiction"
-  seemore(cat, imagess, titless, authorss, idss)
-})
-seemoreButton[1].addEventListener("click", () => {
-  bestsellersHome.classList.toggle("visually-hidden")
-  categoryBlock.classList.toggle("visually-hidden");
-    bestsellersFirst.textContent = "Graphic Books and"
-  bestsellersSecond.textContent = "Manga"
-  const cat = "Graphic Books and Manga"
-  seemore(cat, imagess, titless, authorss, idss)
-})
-seemoreButton[2].addEventListener("click", () => {
-  bestsellersHome.classList.toggle("visually-hidden")
-  categoryBlock.classList.toggle("visually-hidden");
-    bestsellersFirst.textContent = "Hardcover"
-  bestsellersSecond.textContent = "Fiction"
-  const cat = "Hardcover Fiction"
-  seemore(cat, imagess, titless, authorss, idss)
-})
-seemoreButton[3].addEventListener("click", () => {
-  bestsellersHome.classList.toggle("visually-hidden")
-  categoryBlock.classList.toggle("visually-hidden");
-    bestsellersFirst.textContent = "Hardcover"
-  bestsellersSecond.textContent = "Nonfiction"
-  const cat = "Hardcover Nonfiction"
-  seemore(cat, imagess, titless, authorss, idss)
-})
-
-active.addEventListener("click", () => {
   
-  if (!bestsellersHome.classList.contains("visually-hidden")) {
-    return;
-  } else {
+  seemoreButton[0].addEventListener("click", () => {
+    bestsellersHome.classList.toggle("visually-hidden");
+
+    categoryBlock.classList.toggle("visually-hidden");
+    bestsellersFirst.textContent = "Combined Print and E-Book";
+    bestsellersSecond.textContent = "Fiction";
+    const cat = "Combined Print and E-Book Fiction";
+    
+    seemore(cat, imagess, titless, authorss, idss);
+    
+  })
+  seemoreButton[1].addEventListener("click", () => {
     bestsellersHome.classList.toggle("visually-hidden")
-  categoryBlock.classList.toggle("visually-hidden");
-  }
-})
+    categoryBlock.classList.toggle("visually-hidden");
+      bestsellersFirst.textContent = "Graphic Books and"
+    bestsellersSecond.textContent = "Manga"
+    const cat = "Graphic Books and Manga"
+    seemore(cat, imagess, titless, authorss, idss)
+  })
+  seemoreButton[2].addEventListener("click", () => {
+    bestsellersHome.classList.toggle("visually-hidden")
+    categoryBlock.classList.toggle("visually-hidden");
+      bestsellersFirst.textContent = "Hardcover"
+    bestsellersSecond.textContent = "Fiction"
+    const cat = "Hardcover Fiction"
+    seemore(cat, imagess, titless, authorss, idss)
+  })
+  seemoreButton[3].addEventListener("click", () => {
+    bestsellersHome.classList.toggle("visually-hidden")
+    categoryBlock.classList.toggle("visually-hidden");
+      bestsellersFirst.textContent = "Hardcover"
+    bestsellersSecond.textContent = "Nonfiction"
+    const cat = "Hardcover Nonfiction"
+    seemore(cat, imagess, titless, authorss, idss)
+  })
+  active.addEventListener("click", () => {
+  
+    if (!bestsellersHome.classList.contains("visually-hidden")) {
+      return;
+    } else {
+      bestsellersHome.classList.toggle("visually-hidden")
+    categoryBlock.classList.toggle("visually-hidden");
+    }
+  })
+}
+initShowMoreButton();
+

@@ -1,13 +1,29 @@
 import { getBooksByCategory } from "../api";
+import { renderHomePage } from "../markup/markup";
+import { initShowMoreButton } from "../components/bestsellers"
+
 
 const categories = document.querySelectorAll(".bestsellers-item-name")
 const titles = document.querySelectorAll(".bookcard-name")
 const authors = document.querySelectorAll(".bookcard-author")
 const images = document.querySelectorAll(".bookcard-image")
-const ids = document.querySelectorAll(".bookcard")
+const ids = document.querySelectorAll(".bookcard");
+const containerEl = document.querySelector('.best-sellers')
 
 // export function getBookcard(categories, titles, authors, images, ids) {
-    
+    const categoryHomeEl = document.querySelector('#js-home');
+    categoryHomeEl.addEventListener('click', () => {
+        const homePage = renderHomePage();
+        containerEl.innerHTML = homePage;
+        funcInit();
+        
+        const categoriesItems = document.querySelectorAll('.categories-item');
+
+        categoriesItems.forEach(item => item.classList.remove('active'));
+        categoryHomeEl.parentElement.classList.add('active');
+    });
+
+    const funcInit = () => {
         let category = categories[0].textContent;
         getBooksByCategory(category)
             .then(response => {
@@ -24,7 +40,7 @@ const ids = document.querySelectorAll(".bookcard")
                     const b = arr.indexOf(arr[a])
                     arr.splice(b, 1);
                 }
-
+                initShowMoreButton();
             })
             .catch(error => {
                 console.log(error);
@@ -89,11 +105,14 @@ const ids = document.querySelectorAll(".bookcard")
             .catch(error => {
                 console.log(error);
             });
+    }
+       funcInit();
 // }
 
 
 export function seemore(cat, imagess, titless, authorss, idss) {
     let category = cat;
+    
           getBooksByCategory(category)
               .then(response => {
                   const arr = response.data.map(info => info)

@@ -100,8 +100,8 @@
   flex-direction: row;
   column-gap: 25px;
 }
-
-@media screen and (max-width: 1200px) {
+/* D */
+@media screen and (max-width: 1440px) {
   .bestsellers-tablet {
     display: none;
     visibility: hidden;
@@ -136,13 +136,15 @@
     top: 162px;
   }
 }
-@media screen and (min-width: 1200px) {
+/* D */
+@media screen and (min-width: 1440px) {
   .bookcard-image {
     width: 180px;
     height: 256px;
   }
 }
-@media screen and (min-width: 1200px) {
+/* D */
+@media screen and (min-width: 1440px) {
   .bestsellers-list-item {
     width: 1000px;
   }
@@ -164,6 +166,7 @@
   justify-content: center;
   align-items: center;
   column-gap: 25px;
+  justify-content: flex-start;
 }
 @media screen and (min-width: 768px) {
   .bestsellers-choose-list {
@@ -183,7 +186,7 @@
     width: 335px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1440px) {
   .choose-list-item {
     width: 180px;
   }
@@ -203,3 +206,8 @@
 /* .bestsellers-name {
   margin-top: 40px;
 } */
+
+.style-js {
+  /* margin-left: 40px; */
+  margin-bottom: 40px;
+}

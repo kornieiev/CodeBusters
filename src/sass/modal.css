@@ -7,11 +7,16 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 20;
-  transition: 0.3s all;
+
+  transition: 5.5s all;
+
+  transition: visibility 0s, opacity 0.3s;
 }
 
 .modal-overlay-open {
   visibility: visible;
+
+  opacity: 1;
 }
 
 .stop-overflow {
@@ -38,12 +43,30 @@
 
 @media screen and (min-width: 768px) {
   .modal-window-container {
+    /* padding: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 580px;
+    height: 465px; */
     padding: 40px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     width: 580px;
     height: 465px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal-window-container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    max-width: 335px;
+    height: auto;
+    max-height: 100vh;
+    overflow: auto;
   }
 }
 
@@ -92,6 +115,7 @@
   top: 15px;
   right: 15px;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .popup {
@@ -226,7 +250,9 @@
   text-align: center;
 
   margin-left: 47px;
-  visibility: hidden;
+  /* visibility: hidden; */
+
+  /* margin-bottom: 40px; */
 }
 
 @media screen and (min-width: 768px) {
@@ -245,7 +271,7 @@
 }
 
 .congrats-text-active {
-  visibility: visible;
+  /* visibility: visible; */
 }
 
 @media screen and (min-width: 768px) {
@@ -264,4 +290,14 @@
 .modal-add-btn:focus {
   border: 2px solid var(--text-color-hover);
   color: var(--text-color-hover);
+}
+
+.amazon-img-link,
+.applebooks-img-link {
+  filter: grayscale(100%);
+}
+
+.amazon-img-link:hover,
+.applebooks-img-link:hover {
+  filter: none;
 }
