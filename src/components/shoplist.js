@@ -1,11 +1,8 @@
 import { getBookById } from '../api';
 import { deleteFromStorage, getStoredItems } from './localStorageApi';
-import PaginationSystem from './paginationSystem';
-import { paginationImitator } from './paginationSystem';
 
 // Отримання даних з localStorage
 let shoppingList = [];
-let page = 2;
 function init() {
   const windowHeight = window.innerWidth;
   const perPage = windowHeight >= 768 ? 3 : 4;
