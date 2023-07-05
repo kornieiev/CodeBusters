@@ -48,9 +48,10 @@ function getCardId (event) {
   return id;
 }
 
+const bestsellersListEl = document.querySelector('.bestsellers-list');
 
 window.addEventListener('click', getCardId);
-window.addEventListener('click', openModal);
+bestsellersListEl.addEventListener('click', openModal);
 
 modalCloseBtn.addEventListener('click', closeModal)
 
@@ -72,15 +73,15 @@ function openModal(e) {
     // const bookId = e.dataset.id
     // console.log(bookId)
 
-    addButton.addEventListener('click', function() {
-        if (addButton.textContent === 'ADD TO SHOPPING LIST') {
-          addButton.textContent = 'REMOVE FROM THE SHOPPING LIST';
-          congratsText.textContent = 'Сongratulations! You have added the book to the shopping list. To delete, press the button “Remove from the shopping list”.';
-        } else {
-          addButton.textContent = 'ADD TO SHOPPING LIST';
-          congratsText.textContent = '';
-        }
-      });
+    // addButton.addEventListener('click', function() {
+    //     if (addButton.textContent === 'ADD TO SHOPPING LIST') {
+    //       addButton.textContent = 'REMOVE FROM THE SHOPPING LIST';
+    //       congratsText.textContent = 'Сongratulations! You have added the book to the shopping list. To delete, press the button “Remove from the shopping list”.';
+    //     } else {
+    //       addButton.textContent = 'ADD TO SHOPPING LIST';
+    //       congratsText.textContent = '';
+    //     }
+    //   });
 }
 
 function closeModal(e) { 
@@ -100,49 +101,59 @@ function handleKeyPress(event) {
   }
 }
 
+addButton.addEventListener('click', function() {
+  if (addButton.textContent === 'ADD TO SHOPPING LIST') {
+    addButton.textContent = 'REMOVE FROM THE SHOPPING LIST';
+    congratsText.textContent = 'Сongratulations! You have added the book to the shopping list. To delete, press the button “Remove from the shopping list”.';
+  } else {
+    addButton.textContent = 'ADD TO SHOPPING LIST';
+    congratsText.textContent = '';
+  }
+});
+
 
 //------------------test---------------------
 
-function openModal(e) { 
-  e.preventDefault();
-  if (!e.target.classList.contains('bookcard-image') && !e.target.classList.contains('bookcard-slider') && !e.target.classList.contains('quick-view')) {
-    return
-  }
+// function openModal(e) { 
+//   e.preventDefault();
+//   if (!e.target.classList.contains('bookcard-image') && !e.target.classList.contains('bookcard-slider') && !e.target.classList.contains('quick-view')) {
+//     return
+//   }
 
-  document.addEventListener('keydown', handleKeyPress);
-  modalContainer.classList.add("open-modal")
-  modalOverlay.classList.add("open-modal")
+//   document.addEventListener('keydown', handleKeyPress);
+//   modalContainer.classList.add("open-modal")
+//   modalOverlay.classList.add("open-modal")
 
 
-  bodyToScroll.classList.add('stop-overflow');
-  // windowToScroll.on('scroll', preventScroll);
+//   bodyToScroll.classList.add('stop-overflow');
+//   // windowToScroll.on('scroll', preventScroll);
 
-  // const bookId = e.dataset.id
-  // console.log('bookId in openModal '+bookId)
+//   // const bookId = e.dataset.id
+//   // console.log('bookId in openModal '+bookId)
 
-  const bookId = getCardId (e)
-  // console.log('bookId in openModal '+bookId)
+//   const bookId = getCardId (e)
+//   // console.log('bookId in openModal '+bookId)
 
-let author, description, title, image, amazonUrl, appleBooksUrl, booksAMillionUrl;
+// let author, description, title, image, amazonUrl, appleBooksUrl, booksAMillionUrl;
 
-getBookById(bookId)
-  .then((result) => {
-    const yourObject = result;
-    author = yourObject.data.author;
-    description = yourObject.data.description;
-    title = yourObject.data.title;
-    image = yourObject.data.book_image;
-    amazonUrl = yourObject.data.buy_links[0].url
-    appleBooksUrl = yourObject.data.buy_links[1].url
-    booksAMillionUrl = yourObject.data.buy_links[3].url
+// getBookById(bookId)
+//   .then((result) => {
+//     const yourObject = result;
+//     author = yourObject.data.author;
+//     description = yourObject.data.description;
+//     title = yourObject.data.title;
+//     image = yourObject.data.book_image;
+//     amazonUrl = yourObject.data.buy_links[0].url
+//     appleBooksUrl = yourObject.data.buy_links[1].url
+//     booksAMillionUrl = yourObject.data.buy_links[3].url
 
-    myFunction(author, description, title, image, amazonUrl, appleBooksUrl, booksAMillionUrl);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
+//     myFunction(author, description, title, image, amazonUrl, appleBooksUrl, booksAMillionUrl);
+//   })
+//   .catch((error) => {
+//     console.error(error);
+//   });
 
-function myFunction(author, description, title, image, amazonUrl, appleBooksUrl, booksAMillionUrl) {
+// function myFunction(author, description, title, image, amazonUrl, appleBooksUrl, booksAMillionUrl) {
   // console.log('Author:', author);
   // console.log('Description:', description);
   // console.log('Title:', title);
@@ -151,23 +162,15 @@ function myFunction(author, description, title, image, amazonUrl, appleBooksUrl,
   // console.log('Apple Books URL:', appleBooksUrl);
   // console.log('Books-A-Million URL:', booksAMillionUrl);
 
-  modalBookName.textContent = title;
-  modalAuthor.textContent = author;
-  modalDescription.textContent = description;
-  modalImage.src = image;
-  modalImage.alt = image;
-  amazonImgLink.href = amazonUrl;
-  appleBooksImgLink.href = appleBooksUrl;
-  bookshopImgLink.href = booksAMillionUrl;
-}
+//   modalBookName.textContent = title;
+//   modalAuthor.textContent = author;
+//   modalDescription.textContent = description;
+//   modalImage.src = image;
+//   modalImage.alt = image;
+//   amazonImgLink.href = amazonUrl;
+//   appleBooksImgLink.href = appleBooksUrl;
+//   bookshopImgLink.href = booksAMillionUrl;
+// }
 
-  addButton.addEventListener('click', function() {
-      if (addButton.textContent === 'ADD TO SHOPPING LIST') {
-        addButton.textContent = 'REMOVE FROM THE SHOPPING LIST';
-        congratsText.textContent = 'Сongratulations! You have added the book to the shopping list. To delete, press the button “Remove from the shopping list”.';
-      } else {
-        addButton.textContent = 'ADD TO SHOPPING LIST';
-        congratsText.textContent = '';
-      }
-    });
-}
+ 
+// }
