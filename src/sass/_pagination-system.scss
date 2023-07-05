@@ -1,0 +1,30 @@
+.pagination-system {
+  display: block;
+  text-align: center;
+  &-list {
+    display: inline-flex;
+  }
+}
+
+.pagination-button {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 5px;
+  border: none;
+  display: flex;
+  &__arrow {
+    background-color: #f7f7f7;
+    &__reversed {
+      transform: rotateZ(180deg);
+    }
+  }
+  &__clicable {
+    &:hover {
+      border: 1px solid gray;
+    }
+  }
+  &__checked {
+    background-color: black;
+  }
+}

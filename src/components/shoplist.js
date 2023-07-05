@@ -1,18 +1,38 @@
+import { getBookById } from '../api';
+import { deleteFromStorage, getStoredItems } from './localStorageApi';
+
 // Отримання даних з localStorage
-const shoppingList = JSON.parse(localStorage.getItem('shoppingList')) || [];
+let shoppingList = [];
+function init() {
+  const windowHeight = window.innerWidth;
+  const perPage = windowHeight >= 768 ? 3 : 4;
+
+  shoppingList = getStoredItems() || [];
+  const placeHolder = document.querySelector('.shopping-empty-container');
+
+  if (shoppingList.length !== 0) {
+    placeHolder.classList.add('visually-hidden');
+  } else {
+    placeHolder.classList.remove('visually-hidden');
+  }
+}
+
+init();
 
 // Функція для створення карточки з даними
 function createShoppingCard(book) {
   const cardListContainer = document.querySelector('.shopping-list-cardlist');
-
-  const cardHTML = `
-    <li class="shopping-list-card">
-      <img class="shopping-list-cardlogo" src="../images/shopping-list-cardlogo-test.png" alt="book-logo" />
+  const listItem = document.createElement('li');
+  listItem.classList.add('shopping-list-card');
+  const cardHTMLOld = `
+      <img class="shopping-list-cardlogo" src="${
+        book.book_image
+      }" alt="book-logo" />
       <div class="shopping-list-fullinfo">
         <div class="shopping-list-cardheader">
           <div class="cardheader-titlecontainer">
             <h3 class="shopping-list-cardtitle">${book.title}</h3>
-            <h4 class="shopping-list-cardcategory">${book.category}</h4>
+            <h4 class="shopping-list-cardcategory">${book.list_name}</h4>
           </div>
           <button class="deletecard">Х</button>
         </div>
@@ -24,35 +44,115 @@ function createShoppingCard(book) {
           </ul>
         </div>
       </div>
-    </li>
   `;
 
-  cardListContainer.innerHTML += cardHTML;
+  const cardHTML = `
+  <img
+                class="shopping-list-cardlogo"
+                src="${book.book_image}"
+                alt="book-logo"
+              />
+              <div class="shopping-list-fullinfo">
+                <div class="shopping-list-cardheaer">
+                  <div class="cardheaer-tittlecontainer">
+                    <h3 class="shopping-list-cardtitle">${book.title}</h3>
+                    <h4 class="shopping-list-cardcategory">
+                      ${book.list_name}
+                    </h4>
+                  </div>
+                  <button class="deletecard">
+                    <svg class="shopping-list-icon" width="16px" height="16px">
+                      <use href="../images/sprite.svg#icon-trash"></use>
+                    </svg>
+                  </button>
+                </div>
+                <p class="shopping-list-carddescription">
+                  ${book.description}
+                </p>
+                <div class="shopping-list-cardfooter">
+                  <h4 class="shopping-list-cardauthor">${book.author}</h4>
+                  <ul class="shopping-list-shops">
+                    <li class="shopping-list-shopsitem">
+                      <a href="${book.amazon_product_url}" class="shopping-list-shopslink">
+                        <svg
+                          class="shopping-list-shopsicon1"
+                          width="32px"
+                          height="11px"
+                        >
+                          <use href="./sprite.svg#icon-amazon"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="shopping-list-shopsitem">
+                      <a href="" class="shopping-list-shopslink">
+                        <svg
+                          class="shopping-list-shopsicon2"
+                          width="16px"
+                          height="16px"
+                        >
+                          <use href="../images/sprite.svg#icon-bookshop1"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="shopping-list-shopsitem">
+                      <a href="" class="shopping-list-shopslink">
+                        <svg
+                          class="shopping-list-shopsicon2"
+                          width="16px"
+                          height="16px"
+                        >
+                          <use href="../images/sprite.svg#icon-bookshop2"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+  `;
+
+  listItem.innerHTML += cardHTML;
+  listItem.addEventListener(
+    'click',
+    deleteCard.bind({
+      card: listItem,
+      id: book._id,
+    })
+  );
+  cardListContainer.append(listItem);
 }
 
 // Функція для генерації посилань на магазини
 function generateShopLinks(shops) {
-  return shops
-    .map(
-      shop => `
-    <li class="shopping-list-shopsitem">
-      <a href="${shop.url}" class="shopping-list-shopslink">
-        <svg class="shopping-list-shopsicon" width="16" height="16">
-          <use href="../images/sprite.svg#icon-burger"></use>
-        </svg>
-      </a>
-    </li>
-  `
-    )
-    .join('');
+  // return shops
+  //   .map(
+  //     shop => `
+  //   <li class="shopping-list-shopsitem">
+  //     <a href="${shop.url}" class="shopping-list-shopslink">
+  //       <svg class="shopping-list-shopsicon" width="16" height="16">
+  //         <use href="../images/sprite.svg#icon-burger"></use>
+  //       </svg>
+  //     </a>
+  //   </li>
+  // `
+  //   )
+  //   .join('');
 }
 
 // Відображення карточок з даними з localStorage
-function displayShoppingCards() {
+async function displayShoppingCards() {
   const cardListContainer = document.querySelector('.shopping-list-cardlist');
   cardListContainer.innerHTML = '';
+  const arr = [];
+  for (let i = 0; i < shoppingList.length; i++) {
+    const res = await getBookById(shoppingList[i]);
+    if (res) {
+      arr.push(res.data);
+    }
+  }
 
-  shoppingList.forEach(book => {
+  console.log(arr);
+
+  arr.forEach(book => {
     createShoppingCard(book);
   });
 }
@@ -63,14 +163,18 @@ function updateLocalStorage() {
 }
 
 // Приклад додавання книги до списку
-const bookToAdd = {
-  title: 'I will find you',
-  category: 'Hardcover fiction',
-  description: 'David Burroughs was once a devoted father...',
-  author: 'R.J. Palacio',
-  shops: [{ url: 'shop1-url' }, { url: 'shop2-url' }, { url: 'shop3-url' }],
-};
 
-shoppingList.push(bookToAdd);
-updateLocalStorage();
+// updateLocalStorage();
 displayShoppingCards();
+
+function deleteCard(event) {
+  if (
+    event.target.classList.contains('deletecard') ||
+    event.target.classList.contains('shopping-list-icon')
+  ) {
+    deleteFromStorage(this.id);
+    this.card.remove();
+  }
+
+  init();
+}

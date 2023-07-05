@@ -1,3 +1,5 @@
+@import './pagination-system';
+
 .shopping-list-container {
   display: flex;
 }
@@ -171,7 +173,7 @@
   height: 28px;
   flex-shrink: 0;
   border-radius: 28px;
-  background: var(--violet);
+  background: var(--text-color-hover);
 
   @media (min-width: $tablet) {
     width: 34px;
