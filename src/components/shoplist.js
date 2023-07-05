@@ -61,9 +61,6 @@ function createShoppingCard(book) {
                     </h4>
                   </div>
                   <button class="deletecard">
-                    <svg class="shopping-list-icon" width="16px" height="16px">
-                      <use href="../images/sprite.svg#icon-trash"></use>
-                    </svg>
                   </button>
                 </div>
                 <p class="shopping-list-carddescription">
