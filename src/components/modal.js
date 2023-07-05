@@ -29,6 +29,8 @@ const bestListModal = document.querySelector('.bestsellers-list-second')
 const bestListMobile = document.querySelector('.bestsellers-mobile')
 const bestListItemModal = document.querySelector('.bestsellers-list-item')
 
+const modalListenerSection = document.querySelector('.section')
+
 console.log(bestListModal)
 
 // const idFunction = getBookById(id)
@@ -51,10 +53,12 @@ function getCardId (event) {
 const bestsellersListEl = document.querySelector('.bestsellers-list');
 
 window.addEventListener('click', getCardId);
-bestsellersListEl.addEventListener('click', openModal);
+bestsellersListEl.addEventListener('click', openModal); 
+// window.addEventListener('click', openModal);
+// bookcardForModal.addEventListener('click', openModal); 
+modalListenerSection.addEventListener('click', openModal); 
 
 modalCloseBtn.addEventListener('click', closeModal)
-
 
 // function openModal(e) { 
 //     e.preventDefault();
