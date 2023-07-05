@@ -7,11 +7,16 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 20;
-  transition: 0.3s all;
+
+  transition: 5.5s all;
+
+  transition: visibility 0s, opacity 0.3s;
 }
 
 .modal-overlay-open {
   visibility: visible;
+
+  opacity: 1;
 }
 
 .stop-overflow {
@@ -226,7 +231,9 @@
   text-align: center;
 
   margin-left: 47px;
-  visibility: hidden;
+  /* visibility: hidden; */
+
+  /* margin-bottom: 40px; */
 }
 
 @media screen and (min-width: 768px) {
@@ -245,7 +252,7 @@
 }
 
 .congrats-text-active {
-  visibility: visible;
+  /* visibility: visible; */
 }
 
 @media screen and (min-width: 768px) {
@@ -264,4 +271,14 @@
 .modal-add-btn:focus {
   border: 2px solid var(--text-color-hover);
   color: var(--text-color-hover);
+}
+
+.amazon-img-link,
+.applebooks-img-link {
+  filter: grayscale(100%);
+}
+
+.amazon-img-link:hover,
+.applebooks-img-link:hover {
+  filter: none;
 }
