@@ -7,6 +7,9 @@ const modalBookName = document.querySelector('.modal-book-name')
 const modalAuthor = document.querySelector('.modal-author')
 const modalDescription = document.querySelector('.modal-description')
 const modalImage = document.querySelector('.modal-image')
+const amazonImgLink = document.querySelector('.amazon-img-link')
+const appleBooksImgLink = document.querySelector('.applebooks-img-link')
+const bookshopImgLink = document.querySelector('.bookshop-img-link')
 
 const bodyToScroll = document.querySelector('body')
 const windowToScroll = document.querySelector('window')
@@ -118,7 +121,7 @@ function openModal(e) {
   // console.log('bookId in openModal '+bookId)
 
   const bookId = getCardId (e)
-  console.log('bookId in openModal '+bookId)
+  // console.log('bookId in openModal '+bookId)
 
 let author, description, title, image, amazonUrl, appleBooksUrl, booksAMillionUrl;
 
@@ -140,19 +143,22 @@ getBookById(bookId)
   });
 
 function myFunction(author, description, title, image, amazonUrl, appleBooksUrl, booksAMillionUrl) {
-  console.log('Author:', author);
-  console.log('Description:', description);
-  console.log('Title:', title);
-  console.log('Image:', image);
-  console.log('Amazon URL:', amazonUrl);
-  console.log('Apple Books URL:', appleBooksUrl);
-  console.log('Books-A-Million URL:', booksAMillionUrl);
+  // console.log('Author:', author);
+  // console.log('Description:', description);
+  // console.log('Title:', title);
+  // console.log('Image:', image);
+  // console.log('Amazon URL:', amazonUrl);
+  // console.log('Apple Books URL:', appleBooksUrl);
+  // console.log('Books-A-Million URL:', booksAMillionUrl);
 
   modalBookName.textContent = title;
   modalAuthor.textContent = author;
   modalDescription.textContent = description;
   modalImage.src = image;
   modalImage.alt = image;
+  amazonImgLink.href = amazonUrl;
+  appleBooksImgLink.href = appleBooksUrl;
+  bookshopImgLink.href = booksAMillionUrl;
 }
 
   addButton.addEventListener('click', function() {
