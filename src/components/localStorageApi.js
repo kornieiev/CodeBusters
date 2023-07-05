@@ -43,7 +43,8 @@ export const deleteFromStorage = id => {
     return false;
   }
   let parsedData = JSON.parse(data);
-  parsedData = parsedData.filter(item => item !== id);
+  parsedData = parsedData.filter(item => item != id);
+  console.log(parsedData);
   localStorage.setItem(storageFieldName, JSON.stringify(parsedData));
   return true;
 };
