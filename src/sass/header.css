@@ -29,7 +29,9 @@
 
 .logo-text {
   background-color: var(--bg-color-one);
+  transition: background-color 0.7s;
   fill: var(--logo-color);
+  transition: fill 0.7s;
 }
 
 .navigation-menu {

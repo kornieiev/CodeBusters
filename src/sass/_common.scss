@@ -22,6 +22,7 @@ body {
 *::-webkit-scrollbar-thumb {
   background-color: var(--scroll-color);
   border-radius: 4px;
+  transition: background-color 0.7s;
 }
 
 /* default font */
