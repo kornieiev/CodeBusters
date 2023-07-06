@@ -12,6 +12,7 @@
 
 body {
   background-color: var(--bg-color-two);
+  transition: background-color 0.7s;
 }
 
 *::-webkit-scrollbar {

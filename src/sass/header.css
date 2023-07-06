@@ -7,6 +7,7 @@
   padding-top: 18px;
   padding-bottom: 18px;
   background-color: var(--bg-color-one);
+  transition: background-color 1s;
 }
 
 .header-container {
