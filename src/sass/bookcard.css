@@ -29,6 +29,7 @@
 .bookcard-slider {
   height: 70px;
   background-color: #eac645;
+  transition: background-color 0.7s;
   visibility: hidden;
   position: absolute;
   justify-content: center;

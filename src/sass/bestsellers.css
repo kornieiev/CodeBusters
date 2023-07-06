@@ -20,6 +20,7 @@
   position: sticky;
   left: 1500px;
   background-color: var(--bg-color-one);
+  transition: background-color 0.7s;
 }
 .bookcard-image {
   width: 335px;
