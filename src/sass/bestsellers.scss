@@ -55,6 +55,7 @@ img {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 40px;
+    // margin-top: 40px;
     .bestsellers-mobile {
       display: none;
     }
@@ -121,7 +122,7 @@ img {
 }
 
 .bestsellers-item-name {
-  margin: 40px 0 18px 0;
+  margin-bottom: 18px;
   height: 18px;
   color: var(--text-color-three);
   font-size: 14px;
@@ -146,10 +147,12 @@ img {
 
 .bestsellers-name-first {
   color: var(--text-color-two);
+  margin-bottom: 40px;
   margin-top: 40px;
 }
 .bestsellers-name-second {
   color: var(--text-color-hover);
+  margin-bottom: 40px;
   margin-top: 40px;
 }
 
