@@ -29,9 +29,9 @@
 
 .logo-text {
   background-color: var(--bg-color-one);
-  transition: background-color 0.7s;
+  transition: background-color 1s;
   fill: var(--logo-color);
-  transition: fill 0.7s;
+  /* transition: fill 1s; */
 }
 
 .navigation-menu {
@@ -53,6 +53,8 @@
   display: flex;
   gap: 8px;
   align-items: center;
+  background-color: var(--bg-color-one);
+  transition: background-color 1s;
 }
 
 .switch-theme-check {
