@@ -58,38 +58,6 @@ bestsellersListEl.addEventListener('click', openModal);
 
 modalCloseBtn.addEventListener('click', closeModal);
 
-function openModal(e) {
-  e.preventDefault();
-  if (
-    !e.target.classList.contains('bookcard-image') &&
-    !e.target.classList.contains('bookcard-slider') &&
-    !e.target.classList.contains('quick-view')
-  ) {
-    return;
-  }
-
-  document.addEventListener('keydown', handleKeyPress);
-  modalContainer.classList.add('open-modal');
-  modalOverlay.classList.add('open-modal');
-
-  bodyToScroll.classList.add('stop-overflow');
-  // windowToScroll.on('scroll', preventScroll);
-
-  // const bookId = e.dataset.id
-  // console.log(bookId)
-
-  addButton.addEventListener('click', function () {
-    if (addButton.textContent === 'ADD TO SHOPPING LIST') {
-      addButton.textContent = 'REMOVE FROM THE SHOPPING LIST';
-      congratsText.textContent =
-        'Сongratulations! You have added the book to the shopping list. To delete, press the button “Remove from the shopping list”.';
-    } else {
-      addButton.textContent = 'ADD TO SHOPPING LIST';
-      congratsText.textContent = '';
-    }
-  });
-}
-
 function closeModal(e) {
   modalContainer.classList.remove('open-modal');
   modalOverlay.classList.remove('open-modal');
@@ -138,6 +106,8 @@ function openModal(e) {
   } else {
     addButton.textContent = 'REMOVE FROM THE SHOPPING LIST';
   }
+  congratsText.textContent = '';
+  modalContainer.style.height = '465px';
   let author,
     description,
     title,
@@ -203,11 +173,13 @@ addButton.addEventListener('click', function () {
   if (addButton.textContent === 'ADD TO SHOPPING LIST') {
     addToStorage(id);
     addButton.textContent = 'REMOVE FROM THE SHOPPING LIST';
+    modalContainer.style.height = '501px';
     congratsText.textContent =
       'Сongratulations! You have added the book to the shopping list. To delete, press the button “Remove from the shopping list”.';
   } else {
     deleteFromStorage(id);
     addButton.textContent = 'ADD TO SHOPPING LIST';
+    modalContainer.style.height = '465px';
     congratsText.textContent = '';
   }
 });
