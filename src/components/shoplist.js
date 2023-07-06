@@ -21,6 +21,7 @@ init();
 
 // Функція для створення карточки з даними
 function createShoppingCard(book) {
+  const { buy_links } = book;
   const cardListContainer = document.querySelector('.shopping-list-cardlist');
   const listItem = document.createElement('li');
   listItem.classList.add('shopping-list-card');
@@ -70,35 +71,33 @@ function createShoppingCard(book) {
                   <h4 class="shopping-list-cardauthor">${book.author}</h4>
                   <ul class="shopping-list-shops">
                     <li class="shopping-list-shopsitem">
-                      <a href="${book.amazon_product_url}" class="shopping-list-shopslink">
+                      <a href="${buy_links[0].url}" class="shopping-list-shopslink">
                         <img
                           class="shopping-list-shopsicon1"
-                          src="/src/images/shoplist/amazon.png"
+                          src="/amazon.2cdbdfe6.png"
                           alt="amazon"
                           width="32px"
                       />
                       </a>
                     </li>
                     <li class="shopping-list-shopsitem">
-                      <a href="" class="shopping-list-shopslink">
-                        <svg
+                      <a href="${buy_links[1].url}" class="shopping-list-shopslink">
+                       <img
                           class="shopping-list-shopsicon2"
+                          src="/appleBooks@1x.ea11771b.png"
+                          alt="amazon"
                           width="16px"
-                          height="16px"
-                        >
-                          <use href="../images/sprite.svg#icon-bookshop1"></use>
-                        </svg>
+                      />
                       </a>
                     </li>
                     <li class="shopping-list-shopsitem">
-                      <a href="" class="shopping-list-shopslink">
-                        <svg
+                      <a href="${buy_links[4].url}" class="shopping-list-shopslink">
+                        <img
                           class="shopping-list-shopsicon2"
+                          src="/booksAMillion@1x.89ef278d.png"
+                          alt="amazon"
                           width="16px"
-                          height="16px"
-                        >
-                          <use href="../images/sprite.svg#icon-bookshop2"></use>
-                        </svg>
+                      />
                       </a>
                     </li>
                   </ul>
