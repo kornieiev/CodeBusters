@@ -1,16 +1,19 @@
 // тут буде логіка для розмітки яка буде створюватись з данних бекенду
-export const renderBooks = ({books}) => {
-    return `
+export const renderBooks = ({ books }) => {
+  return `
     <div class="bestsellers-home">
         <h3 class="bestsellers-name style-js">
-                    <div class="bestsellers-name-first">${books[0].list_name}</div>
+                    <div class="bestsellers-name-first">${
+                      books[0].list_name
+                    }</div>
                     <div class="bestsellers-name-second">Books</div>
         </h3>
         <div class="bestsellers-list">
                 <div class="bestsellers-list-item list">
-                    <ul class="bestsellers-choose-list">
-                        ${books.map((book) => {
-                        return `
+                    <ul class="bestsellers-choose-list bestsellers-list-second">
+                        ${books
+                          .map(book => {
+                            return `
                             <li class="choose-list-item">
                                 <div id="${book._id}" class="bookcard">
                                     <img class="bookcard-image" src="${book.book_image}" alt="book cover" width="280">
@@ -18,19 +21,19 @@ export const renderBooks = ({books}) => {
                                     <p class="bookcard-author">${book.author}</p>
                                 </div>
                             </li>
-                            `
-                        })}
+                            `;
+                          })
+                          .join('')}
                          
                     </ul>
                 </div>
         </div>
     </div>  
-    `
+    `;
 };
 
-
 export const renderHomePage = () => {
-    return `
+  return `
     
   <div class="bestsellers-home">
     <h3 class="bestsellers-name">
@@ -544,6 +547,5 @@ export const renderHomePage = () => {
       </li>
     </ul>
   </div>
-    `
-}
-
+    `;
+};
