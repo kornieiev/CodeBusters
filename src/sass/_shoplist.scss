@@ -2,6 +2,8 @@
 
 .shopping-list-container {
   display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .shopping-list-left {
@@ -273,6 +275,7 @@
   display: flex;
   align-items: flex-end;
   gap: 8px;
+  align-items: center;
 
   @media (min-width: $tablet) {
     gap: 16px;
