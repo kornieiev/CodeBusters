@@ -70,36 +70,21 @@ function createShoppingCard(book) {
                 <div class="shopping-list-cardfooter">
                   <h4 class="shopping-list-cardauthor">${book.author}</h4>
                   <ul class="shopping-list-shops">
-                    <li class="shopping-list-shopsitem">
-                      <a href="${buy_links[0].url}" class="shopping-list-shopslink">
-                        <img
-                          class="shopping-list-shopsicon1"
-                          src="/amazon.2cdbdfe6.png"
-                          alt="amazon"
-                          width="32px"
-                      />
-                      </a>
-                    </li>
-                    <li class="shopping-list-shopsitem">
-                      <a href="${buy_links[1].url}" class="shopping-list-shopslink">
-                       <img
-                          class="shopping-list-shopsicon2"
-                          src="/appleBooks@1x.ea11771b.png"
-                          alt="amazon"
-                          width="16px"
-                      />
-                      </a>
-                    </li>
-                    <li class="shopping-list-shopsitem">
-                      <a href="${buy_links[4].url}" class="shopping-list-shopslink">
-                        <img
-                          class="shopping-list-shopsicon2"
-                          src="/booksAMillion@1x.89ef278d.png"
-                          alt="amazon"
-                          width="16px"
-                      />
-                      </a>
-                    </li>
+                <li class="shopping-list-shopsitem">
+                  <a href="${buy_links[0].url}" class="shopping-list-shopslink">
+                    <div class="shopping-list-shopsicon1"></div>
+                  </a>
+                </li>
+                <li class="shopping-list-shopsitem">
+                  <a href="${buy_links[1].url}" class="shopping-list-shopslink">
+                    <div class="shopping-list-shopsicon2"></div>
+                  </a>
+                </li>
+                <li class="shopping-list-shopsitem">
+                  <a href="${buy_links[4].url}" class="shopping-list-shopslink">
+                    <div class="shopping-list-shopsicon3"></div>
+                  </a>
+                </li>
                   </ul>
                 </div>
               </div>
