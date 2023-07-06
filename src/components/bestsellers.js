@@ -9,7 +9,7 @@ import { seemore } from "./bookcard";
 
 // getBookcard(categories, titles, authors, images, ids)
 
-
+let listEl = document.querySelector('.bestsellers-choose-list');
 
 const upButton = document.querySelector(".bestsellers-button-up")
 const header = document.querySelector(".header")
@@ -34,6 +34,7 @@ const bestsellersFirst = document.querySelector(".category-name-first")
 const bestsellersSecond = document.querySelector(".category-name-second")
 categoryBlock.classList.toggle("visually-hidden");
 
+listEl.classList.add('visually-hidden');
   
   seemoreButton[0].addEventListener("click", () => {
     bestsellersHome.classList.toggle("visually-hidden");
