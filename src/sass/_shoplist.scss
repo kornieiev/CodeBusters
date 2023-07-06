@@ -21,19 +21,18 @@
 }
 
 .shopping-list-right {
+  margin-top: 40px;
   flex-grow: 1;
 }
 
 .shopping-list {
-  margin-top: 40px;
   @media (min-width: $desktop) {
-    padding-left: 24px;
+    padding-left: 40px;
   }
 }
 
 .shopping-empty-container {
   margin: 120px auto 0;
-  width: 265px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,7 +78,7 @@
   margin-bottom: 14px;
   margin-top: 0;
   width: 244px;
-  color: var(--text-color-one);
+  color: var(--text-color-three);
   text-align: center;
   font-size: 14px;
   font-family: 'DM Sans';
@@ -97,18 +96,20 @@
 }
 
 .shopping-empty-image {
-  width: 275px;
+  width: 265px;
+  height: 198px;
 
   @media (min-width: $tablet) {
     width: 322px;
+    height: 241px;
   }
 }
 
 /* cardlist */
 .shopping-cardlist-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
 }
 .shopping-list-cardlist {
   margin-top: 40px;
@@ -172,7 +173,7 @@
 }
 
 .deletecard {
-  background-image: url(../images/shoplist/trash-03.svg);
+  background-image: url(../images/shoplist/trash-mob.svg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -182,6 +183,7 @@
   border-radius: 28px;
 
   @media (min-width: $tablet) {
+    background-image: url(../images/shoplist/trash-tab.svg);
     width: 34px;
     height: 34px;
     border-radius: 34px;
@@ -190,7 +192,6 @@
 
 .shopping-list-cardtitle {
   overflow: hidden;
-  height: 18px;
   color: var(--text-color-two);
   font-size: 16px;
   font-family: DM Sans;
@@ -226,8 +227,9 @@
   overflow: hidden;
   overflow-y: scroll;
   margin: 0px 0px 16px 0px;
+  overflow: hidden;
   color: var(--text-color-two);
-  text-overflow: ellipsis;
+  // text-overflow: ellipsis;
   // whitespace: nowrap;
   font-size: 14px;
   font-family: DM Sans;
@@ -256,8 +258,6 @@
 }
 
 .shopping-list-cardauthor {
-  height: 14px;
-  overflow: hidden;
   margin: 0px;
   color: var(--text-color-three);
   font-size: 12px;
@@ -279,7 +279,6 @@
 }
 
 .shopping-list-shopsicon1 {
-  color: black;
   @media (min-width: $tablet) {
     width: 48px;
     height: 15px;

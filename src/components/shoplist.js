@@ -71,13 +71,12 @@ function createShoppingCard(book) {
                   <ul class="shopping-list-shops">
                     <li class="shopping-list-shopsitem">
                       <a href="${book.amazon_product_url}" class="shopping-list-shopslink">
-                        <svg
+                        <img
                           class="shopping-list-shopsicon1"
+                          src="/src/images/shoplist/amazon.png"
+                          alt="amazon"
                           width="32px"
-                          height="11px"
-                        >
-                          <use href="./sprite.svg#icon-amazon"></use>
-                        </svg>
+                      />
                       </a>
                     </li>
                     <li class="shopping-list-shopsitem">
