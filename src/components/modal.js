@@ -107,7 +107,7 @@ function openModal(e) {
     addButton.textContent = 'REMOVE FROM THE SHOPPING LIST';
   }
   congratsText.textContent = '';
-  modalContainer.style.height = '465px';
+  modalContainer.style.maxHeight = '100vh';
   let author,
     description,
     title,
